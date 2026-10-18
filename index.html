@@ -3,38 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laura Fajardo | Terapeuta Ocupacional - Salud Integrativa Online</title>
-    <meta name="description" content="Sesiones online de Terapia Ocupacional + PNI para neurodivergentes. Acompaño a padres de adolescentes y adultos. 10+ años de experiencia.">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Terapia ocupacional online y PNI | Laura Fajardo</title>
+    <meta name="description" content="Terapia ocupacional online y PNI para personas adultas neurodivergentes. Método propio de 6 esferas. Primera llamada gratuita de 15 minutos.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         :root {
-            --primary: #1ba898;
-            --dark: #3d5a5a;
-            --light: #f8faf9;
-            --text: var(--dark);
-            --text-light: #6a7a7a;
-            --white: #ffffff;
-            --border: #e5ebe8;
+            --pizarra: #3D5A5A;
+            --pizarra-profunda: #2B4242;
+            --turquesa: #1BA898;
+            --turquesa-profunda: #147B6F;
+            --turquesa-hover: #11695F;
+            --texto-secundario: #5C6E6D;
+            --fondo: #FFFFFF;
+            --fondo-niebla: #F8FAF9;
+            --fondo-arena: #F7F3EE;
+            --fondo-velo: #E8F5F2;
+            --borde-suave: #E5EBE8;
+            --borde-control: #768C89;
+            --radio-md: 16px;
+            --radio-lg: 24px;
+            --radio-pill: 999px;
+            --font-display: "Montserrat", "Segoe UI", Arial, sans-serif;
+            --font-body: "Nunito Sans", "Segoe UI", Arial, sans-serif;
         }
+
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.7;
-            color: var(--text);
-            background: var(--white);
-            letter-spacing: 0.25px;
+            font-family: var(--font-body);
+            color: var(--pizarra);
+            background: var(--fondo);
+            line-height: 1.65;
+            font-size: 18px;
         }
+
         .container { max-width: 1140px; margin: 0 auto; padding: 0 32px; }
 
         /* HEADER */
         header {
-            background: var(--white);
-            border-bottom: 1px solid var(--border);
+            background: var(--fondo);
+            border-bottom: 1px solid var(--borde-suave);
             position: sticky;
             top: 0;
             z-index: 100;
-            padding: 26px 0;
+            padding: 24px 0;
         }
+
         .header-content {
             display: flex;
             justify-content: space-between;
@@ -43,183 +57,558 @@
             margin: 0 auto;
             padding: 0 32px;
         }
-        .logo { display: flex; align-items: center; gap: 16px; text-decoration: none; }
-        .logo-icon { width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--dark); }
-        .logo-text { font-size: 1.08em; color: var(--dark); font-weight: 600; letter-spacing: -0.3px; }
-        nav { display: flex; gap: 50px; }
-        nav a { text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.93em; transition: color 0.3s ease; }
-        nav a:hover { color: var(--primary); }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--pizarra);
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 50px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--pizarra);
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--turquesa-profunda);
+        }
+
+        .btn-header {
+            background: var(--turquesa-profunda);
+            color: var(--fondo);
+            padding: 12px 24px;
+            border-radius: var(--radio-md);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+        }
+
+        .btn-header:hover {
+            background: var(--turquesa-hover);
+            transform: translateY(-2px);
+        }
 
         /* HERO */
         .hero {
-            padding: 180px 32px 130px;
-            background: linear-gradient(135deg, rgba(27, 168, 152, 0.04) 0%, rgba(61, 90, 90, 0.02) 100%);
+            padding: 120px 32px;
+            background: linear-gradient(135deg, var(--fondo-velo) 0%, var(--fondo-niebla) 100%);
         }
+
         .hero-content {
             max-width: 1140px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 110px;
+            gap: 80px;
             align-items: center;
         }
-        .hero-text h1 { font-family: 'Playfair Display', serif; font-size: 3.6em; font-weight: 700; margin-bottom: 40px; line-height: 1.1; color: var(--text); letter-spacing: -1.3px; }
-        .hero-text p { font-size: 1.14em; color: var(--text-light); margin-bottom: 16px; line-height: 1.8; }
-        .hero-subtitle { font-size: 1.02em; color: var(--text-light); margin-bottom: 65px; line-height: 1.85; }
-        .hero-img { text-align: center; }
-        .hero-img img { width: 100%; max-width: 460px; border-radius: 20px; box-shadow: 0 28px 80px rgba(61, 90, 90, 0.14); }
-        .btn {
+
+        .hero-badge {
             display: inline-block;
-            background: var(--primary);
-            color: var(--white);
-            padding: 19px 50px;
-            border-radius: 8px;
+            background: var(--fondo-velo);
+            color: var(--turquesa-profunda);
+            padding: 10px 18px;
+            border-radius: var(--radio-pill);
+            font-size: 0.85em;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: 3.2em;
+            font-weight: 600;
+            margin-bottom: 32px;
+            line-height: 1.2;
+            color: var(--pizarra);
+        }
+
+        .hero-text p {
+            color: var(--texto-secundario);
+            margin-bottom: 16px;
+            line-height: 1.8;
+            max-width: 68ch;
+        }
+
+        .hero-credentials {
+            font-size: 0.9em;
+            color: var(--texto-secundario);
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid var(--borde-suave);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            margin: 48px 0;
+        }
+
+        .btn-primary {
+            background: var(--turquesa-profunda);
+            color: var(--fondo);
+            padding: 16px 40px;
+            border-radius: var(--radio-md);
             text-decoration: none;
             font-weight: 700;
-            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s;
             border: none;
-            font-size: 0.98em;
-            transition: all 0.3s ease;
-            letter-spacing: 0.3px;
-            box-shadow: 0 10px 30px rgba(27, 168, 152, 0.2);
+            cursor: pointer;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
         }
-        .btn:hover { background: #159580; transform: translateY(-4px); box-shadow: 0 18px 45px rgba(27, 168, 152, 0.3); }
+
+        .btn-primary:hover {
+            background: var(--turquesa-hover);
+            transform: translateY(-4px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--turquesa-profunda);
+            border: 2px solid var(--turquesa-profunda);
+            padding: 14px 38px;
+            border-radius: var(--radio-md);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .btn-secondary:hover {
+            background: var(--turquesa-profunda);
+            color: var(--fondo);
+        }
+
+        .hero-img {
+            text-align: center;
+        }
+
+        .hero-img img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: var(--radio-lg);
+            box-shadow: 0 28px 80px rgba(45, 66, 66, 0.15);
+        }
+
+        .hero-subtext {
+            font-size: 0.9em;
+            color: var(--texto-secundario);
+            margin-top: 16px;
+        }
 
         /* SECCIONES */
-        section { padding: 160px 32px; }
-        section.light { background: var(--light); }
-        section h2 { font-family: 'Playfair Display', serif; font-size: 3em; text-align: center; color: var(--text); margin-bottom: 95px; font-weight: 700; letter-spacing: -1px; }
-
-        /* STATS */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 80px;
-            text-align: center;
-            margin-bottom: 95px;
-            max-width: 1140px;
-            margin-left: auto;
-            margin-right: auto;
+        section {
+            padding: 120px 32px;
         }
-        .stat-item h3 { font-size: 3.6em; color: var(--primary); font-weight: 700; margin-bottom: 16px; letter-spacing: -1px; }
-        .stat-item p { color: var(--text-light); font-size: 0.98em; line-height: 1.7; }
 
-        /* CARDS */
+        section.light-bg {
+            background: var(--fondo-arena);
+        }
+
+        section.velo-bg {
+            background: var(--fondo-velo);
+        }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: 2.2em;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 80px;
+            color: var(--pizarra);
+        }
+
+        /* TARJETAS */
         .cards {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 45px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
             max-width: 1140px;
             margin: 0 auto;
         }
+
         .card {
-            background: var(--white);
-            padding: 55px;
-            border-radius: 16px;
-            text-align: center;
-            border: 1px solid var(--border);
-            transition: all 0.35s ease;
+            background: var(--fondo);
+            padding: 40px;
+            border-radius: var(--radio-lg);
+            border: 1px solid var(--borde-suave);
+            transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
         }
-        .card:hover { border-color: var(--primary); box-shadow: 0 20px 60px rgba(27, 168, 152, 0.15); transform: translateY(-8px); }
-        .card-icon { width: 75px; height: 75px; margin: 0 auto 32px; display: block; }
-        .card h3 { color: var(--text); margin-bottom: 18px; font-size: 1.55em; font-weight: 700; }
-        .card .subtitle { color: var(--primary); font-weight: 700; font-size: 0.82em; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.6px; }
-        .card p { color: var(--text-light); line-height: 1.9; font-size: 0.97em; flex-grow: 1; margin-bottom: 28px; }
-        .card .btn { width: 100%; display: block; margin: 0; }
+
+        .card:hover {
+            border-color: var(--turquesa-profunda);
+            box-shadow: 0 20px 60px rgba(20, 123, 111, 0.15);
+            transform: translateY(-8px);
+        }
+
+        .card-subtitle {
+            color: var(--turquesa-profunda);
+            font-weight: 700;
+            font-size: 0.8em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .card h3 {
+            font-family: var(--font-display);
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--pizarra);
+        }
+
+        .card p {
+            color: var(--texto-secundario);
+            flex-grow: 1;
+            margin-bottom: 24px;
+            line-height: 1.8;
+            text-align: left;
+        }
+
+        .card .btn-primary {
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+        }
+
+        /* MÉTODO 6 ESFERAS */
+        .method-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 80px;
+            color: var(--texto-secundario);
+            line-height: 1.8;
+        }
+
+        .esferas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .esfera {
+            background: var(--fondo);
+            padding: 40px;
+            border-radius: var(--radio-lg);
+            border: 1px solid var(--borde-suave);
+            text-align: center;
+        }
+
+        .esfera-num {
+            font-family: var(--font-display);
+            font-size: 2.4em;
+            font-weight: 600;
+            color: var(--turquesa-profunda);
+            margin-bottom: 16px;
+        }
+
+        .esfera h3 {
+            font-family: var(--font-display);
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--pizarra);
+        }
+
+        .esfera p {
+            color: var(--texto-secundario);
+            line-height: 1.8;
+            font-size: 0.95em;
+        }
 
         /* PROCESO */
         .process {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 32px;
             max-width: 1140px;
             margin: 0 auto;
         }
-        .process-step {
-            background: var(--white);
-            padding: 45px;
-            border-radius: 14px;
-            border: 1px solid var(--border);
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        .process-step:hover { border-color: var(--primary); box-shadow: 0 14px 36px rgba(27, 168, 152, 0.1); }
-        .process-step h4 { color: var(--text); font-size: 1.35em; margin-bottom: 20px; font-weight: 700; }
-        .process-step .number { color: var(--primary); font-weight: 700; font-size: 1.8em; display: block; margin-bottom: 12px; }
-        .process-step p { color: var(--text-light); font-size: 0.95em; line-height: 1.8; }
 
-        /* ABOUT */
-        .about-content {
+        .step {
+            background: var(--fondo);
+            padding: 40px;
+            border-radius: var(--radio-lg);
+            border: 1px solid var(--borde-suave);
+            text-align: center;
+        }
+
+        .step-num {
+            font-family: var(--font-display);
+            font-size: 2.2em;
+            color: var(--turquesa-profunda);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .step h3 {
+            font-family: var(--font-display);
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 14px;
+            color: var(--pizarra);
+        }
+
+        .step p {
+            color: var(--texto-secundario);
+            font-size: 0.95em;
+            line-height: 1.8;
+        }
+
+        /* SOBRE MÍ */
+        .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 120px;
+            gap: 80px;
             align-items: start;
             max-width: 1140px;
             margin: 0 auto;
         }
-        .about-text h3 { font-family: 'Playfair Display', serif; color: var(--text); font-size: 2.4em; margin-bottom: 40px; font-weight: 700; letter-spacing: -0.6px; }
-        .about-text p { margin-bottom: 28px; line-height: 2; font-size: 1em; color: var(--text); }
-        .about-list { list-style: none; margin: 55px 0; }
-        .about-list li { padding: 18px 0; font-size: 1em; line-height: 1.9; color: var(--text); }
-        .about-list li:before { content: "✓ "; color: var(--primary); font-weight: 700; margin-right: 16px; font-size: 1.2em; }
-        .about-img { border-radius: 16px; overflow: hidden; box-shadow: 0 28px 70px rgba(61, 90, 90, 0.14); }
-        .about-img img { width: 100%; display: block; }
+
+        .about-text h3 {
+            font-family: var(--font-display);
+            font-size: 2em;
+            font-weight: 600;
+            margin-bottom: 32px;
+            color: var(--pizarra);
+        }
+
+        .about-text p {
+            color: var(--pizarra);
+            margin-bottom: 24px;
+            line-height: 2;
+            font-size: 1em;
+        }
+
+        .about-creds {
+            list-style: none;
+            margin: 40px 0;
+        }
+
+        .about-creds li {
+            padding: 12px 0;
+            color: var(--pizarra);
+            line-height: 1.9;
+            font-size: 0.95em;
+        }
+
+        .about-creds li:before {
+            content: "✓ ";
+            color: var(--turquesa-profunda);
+            font-weight: 700;
+            margin-right: 12px;
+        }
+
+        .about-img {
+            border-radius: var(--radio-lg);
+            overflow: hidden;
+            box-shadow: 0 28px 70px rgba(45, 66, 66, 0.14);
+        }
+
+        .about-img img {
+            width: 100%;
+            display: block;
+            height: auto;
+        }
 
         /* FAQ */
-        .faq-container { max-width: 1140px; margin: 0 auto; }
-        .faq-item { margin-bottom: 36px; border-bottom: 1px solid var(--border); }
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 32px;
+            border-bottom: 1px solid var(--borde-suave);
+        }
+
         .faq-question {
             cursor: pointer;
-            padding: 36px;
+            padding: 24px;
             background: transparent;
-            border-radius: 12px;
+            border-radius: var(--radio-md);
             font-weight: 700;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 1.08em;
-            transition: all 0.3s ease;
-            color: var(--text);
+            font-size: 1.1em;
+            color: var(--pizarra);
+            transition: background 0.3s;
+            border: none;
+            width: 100%;
         }
-        .faq-question:hover { background: var(--light); }
-        .faq-answer { padding: 0 36px 36px; display: none; background: transparent; line-height: 1.9; font-size: 1em; color: var(--text-light); }
-        .faq-answer.active { display: block; }
+
+        .faq-question:hover {
+            background: var(--fondo-niebla);
+        }
+
+        .faq-answer {
+            padding: 0 24px 24px;
+            display: none;
+            line-height: 1.9;
+            color: var(--texto-secundario);
+            font-size: 0.95em;
+            font-weight: 400;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
 
         /* CTA FINAL */
         .cta-final {
             text-align: center;
-            padding: 150px 50px;
-            background: linear-gradient(135deg, var(--light) 0%, rgba(27, 168, 152, 0.06) 100%);
-            border-radius: 16px;
-            margin: 120px auto;
-            max-width: 1140px;
-            border: 2px solid var(--border);
+            padding: 100px 50px;
+            background: var(--pizarra-profunda);
+            border-radius: var(--radio-lg);
+            margin: 100px auto;
+            max-width: 900px;
+            color: var(--fondo);
         }
-        .cta-final h2 { font-family: 'Playfair Display', serif; margin-bottom: 32px; font-size: 3em; color: var(--text); letter-spacing: -1px; }
-        .cta-final p { font-size: 1.18em; margin-bottom: 55px; color: var(--text-light); line-height: 1.9; max-width: 650px; margin-left: auto; margin-right: auto; }
+
+        .cta-final h2 {
+            color: var(--fondo);
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .cta-final p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1em;
+            margin-bottom: 40px;
+            line-height: 1.8;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
         /* FOOTER */
-        footer { background: var(--dark); color: var(--white); text-align: center; padding: 80px 32px; }
-        footer p { margin: 14px 0; opacity: 0.9; font-size: 0.97em; }
-        .footer-links { margin-top: 36px; }
-        .footer-links a { color: var(--primary); text-decoration: none; margin: 0 24px; font-weight: 700; font-size: 0.97em; transition: opacity 0.3s ease; }
-        .footer-links a:hover { opacity: 0.75; }
+        footer {
+            background: var(--pizarra-profunda);
+            color: var(--fondo);
+            text-align: center;
+            padding: 60px 32px;
+        }
 
-        @media (max-width: 768px) {
-            .hero { padding: 100px 32px 80px; }
-            .hero h1 { font-size: 2.4em; }
-            .hero-content { grid-template-columns: 1fr; gap: 60px; }
-            section { padding: 100px 32px; }
-            section h2 { font-size: 2.2em; margin-bottom: 70px; }
-            nav { gap: 30px; }
-            .about-content { grid-template-columns: 1fr; gap: 60px; }
-            .cards { grid-template-columns: 1fr; }
-            .process { grid-template-columns: 1fr; }
-            .stats { grid-template-columns: 1fr; gap: 50px; }
-            .card { padding: 40px; }
-            .cta-final { padding: 100px 40px; }
+        footer p {
+            margin: 12px 0;
+            opacity: 0.9;
+            font-size: 0.95em;
+        }
+
+        .footer-links {
+            margin-top: 32px;
+        }
+
+        .footer-links a {
+            color: var(--turquesa);
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 700;
+            font-size: 0.95em;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 0.75;
+        }
+
+        .footer-legal {
+            margin-top: 32px;
+            font-size: 0.85em;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .hero h1 {
+                font-size: 2.4em;
+            }
+
+            h2 {
+                font-size: 1.8em;
+                margin-bottom: 60px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            nav {
+                gap: 30px;
+            }
+
+            section {
+                padding: 80px 32px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 80px 32px;
+            }
+
+            .hero h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            nav {
+                gap: 16px;
+                font-size: 0.85em;
+            }
+
+            .cards, .esferas-grid, .process {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-final {
+                padding: 60px 32px;
+                margin: 60px auto;
+            }
         }
     </style>
 </head>
@@ -227,208 +616,243 @@
     <!-- HEADER -->
     <header>
         <div class="header-content">
-            <a href="#" class="logo">
-                <div class="logo-icon">LF+</div>
-                <span class="logo-text">Laura Fajardo</span>
-            </a>
+            <a href="#" class="logo">Laura Fajardo</a>
             <nav>
-                <a href="#inicio">Inicio</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#proceso">Proceso</a>
+                <a href="#metodo">Método</a>
+                <a href="#como-trabajo">Cómo trabajo</a>
                 <a href="#sobre-mi">Sobre mí</a>
-                <a href="#faq">Preguntas</a>
+                <a href="#preguntas">Preguntas</a>
             </nav>
+            <a href="https://wa.me/34613024556?text=Hola%20Laura.%20Vengo%20de%20tu%20web%20y%20me%20gustaría%20reservar%20la%20llamada%20gratuita%20de%2015%20minutos." class="btn-header" target="_blank">Escríbeme</a>
         </div>
     </header>
 
     <!-- HERO -->
-    <section class="hero" id="inicio">
+    <section class="hero">
         <div class="hero-content">
-            <div class="hero-text">
-                <h1>¿Procesas el mundo de forma diferente y esto te impacta en el día a día?</h1>
-                <p style="font-size: 1.18em; color: var(--text); margin-bottom: 20px;">Soy Laura Fajardo, Terapeuta Ocupacional especializada en neurodivergencia</p>
-                <p class="hero-subtitle">Sesiones para mejorar la salud de adolescentes y adultos dentro de la neurodiversidad.<br>Terapia Ocupacional + Psiconeuroinmunología • 100% online</p>
-                <a href="https://wa.me/34613024556?text=Hola%20Laura%20👋%20Me%20gustaría%20agendar%20una%20consulta%20gratuita%20de%2015%20minutos%20para%20entender%20mejor%20cómo%20trabajas.%20¿Cuándo%20tienes%20disponibilidad?" class="btn" target="_blank">📱 Consulta gratuita 15 min</a>
+            <div>
+                <div class="hero-badge">Terapia Ocupacional + PNI</div>
+                <h1>No es falta de voluntad. Es tu sistema nervioso pidiendo otro plan.</h1>
+                <p>Soy Laura Fajardo, terapeuta ocupacional. Te acompaño online a entender cómo funciona tu sistema nervioso y a construir un estilo de vida que te ayude a regularte y tenga sentido para ti.</p>
+                <div class="hero-cta">
+                    <a href="https://wa.me/34613024556?text=Hola%20Laura.%20Vengo%20de%20tu%20web%20y%20me%20gustaría%20reservar%20la%20llamada%20gratuita%20de%2015%20minutos." class="btn-primary" target="_blank">Escríbeme por WhatsApp</a>
+                    <a href="#metodo" class="btn-secondary">Ver cómo trabajo</a>
+                </div>
+                <p class="hero-subtext">Primera llamada de 15 minutos, gratuita y sin compromiso.</p>
+                <div class="hero-credentials">
+                    <span>Terapeuta ocupacional colegiada nº 46400519</span>
+                    <span>Más de 10 años de experiencia clínica</span>
+                    <span>Directora de Proyecto PasiTOs, centro autorizado por la Comunidad de Madrid (S8268)</span>
+                </div>
             </div>
             <div class="hero-img">
-                <img src="img/laura.jpg" alt="Laura Fajardo - Terapeuta Ocupacional" loading="lazy">
+                <img src="img/laura.jpg" alt="Laura Fajardo, terapeuta ocupacional, en su espacio de trabajo" loading="lazy">
             </div>
         </div>
     </section>
 
-    <!-- CREDIBILIDAD -->
-    <section style="padding: 120px 32px; background: var(--white);">
-        <div class="stats">
-            <div class="stat-item">
-                <h3>10+</h3>
-                <p>Años de<br>experiencia clínica</p>
-            </div>
-            <div class="stat-item">
-                <h3>400+</h3>
-                <p>Familias y adultos<br>acompañados</p>
-            </div>
-            <div class="stat-item">
-                <h3>85%+</h3>
-                <p>Tasa de mejora<br>en mis clientes</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICIOS -->
-    <section class="light" id="servicios">
-        <h2>¿En qué puedo ayudarte?</h2>
-        <div class="cards">
-            <div class="card">
-                <svg class="card-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="32" r="10" fill="#1ba898"/>
-                    <path d="M40 45 L60 45 L60 62 L40 62 Z" fill="#1ba898"/>
-                    <circle cx="35" cy="20" r="7.5" fill="#1ba898" opacity="0.7"/>
-                    <circle cx="65" cy="18" r="7.5" fill="#1ba898" opacity="0.7"/>
-                    <path d="M28 50 L18 58" stroke="#1ba898" stroke-width="2.5" stroke-linecap="round"/>
-                    <path d="M72 50 L82 58" stroke="#1ba898" stroke-width="2.5" stroke-linecap="round"/>
-                </svg>
-                <div class="subtitle">Para Padres</div>
-                <h3>Acompaño a tu adolescente</h3>
-                <p>Si tu hijo lucha con neurodivergencia, migrañas, dificultades sensoriales o estrés académico. Entiendo lo que significa ser padre de un adolescente diferente.</p>
-                <a href="https://wa.me/34613024556?text=Hola%20Laura%20👋%20Soy%20padre/madre%20de%20un%20adolescente%20neurodivergente.%20Me%20gustaría%20saber%20cómo%20puedes%20ayudarnos.%20¿Cuándo%20tienes%20una%20consulta%20disponible?" class="btn" target="_blank">Iniciar ahora</a>
-            </div>
-            <div class="card">
-                <svg class="card-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M50 22 C62 28 68 40 68 52 C68 68 60 80 50 83 C40 80 32 68 32 52 C32 40 38 28 50 22" fill="none" stroke="#1ba898" stroke-width="2.8" stroke-linecap="round"/>
-                    <path d="M45 42 Q50 40 55 42" fill="none" stroke="#1ba898" stroke-width="1.8" stroke-linecap="round"/>
-                    <path d="M45 55 Q50 53 55 55" fill="none" stroke="#1ba898" stroke-width="1.8" stroke-linecap="round"/>
-                    <circle cx="50" cy="50" r="3.5" fill="#1ba898"/>
-                </svg>
-                <div class="subtitle">Problemas Específicos</div>
-                <h3>Raíces del síntoma</h3>
-                <p>Migrañas, insomnio, reactividad sensorial, estrés crónico. No tratamos síntomas aislados: abordamos cómo tu sensorialidad, sueño y estrés están conectados.</p>
-                <a href="https://wa.me/34613024556?text=Hola%20Laura%20👋%20Tengo%20migrañas%2C%20problemas%20de%20sueño%20y%20estrés%20crónico.%20Me%20gustaría%20explorar%20tu%20enfoque%20de%20salud%20integrativa.%20¿Disponible%20para%20una%20consulta?" class="btn" target="_blank">Iniciar ahora</a>
-            </div>
-            <div class="card">
-                <svg class="card-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="28" r="13" fill="#1ba898"/>
-                    <path d="M40 45 L60 45 L60 72 L40 72 Z" fill="#1ba898"/>
-                    <path d="M40 52 L25 62" stroke="#1ba898" stroke-width="3" stroke-linecap="round"/>
-                    <path d="M60 52 L75 62" stroke="#1ba898" stroke-width="3" stroke-linecap="round"/>
-                    <line x1="30" y1="80" x2="70" y2="80" stroke="#1ba898" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
-                </svg>
-                <div class="subtitle">Para Adultos</div>
-                <h3>Entiéndete a ti mismo</h3>
-                <p>Si eres adulto neurodivergente (25-45) buscas entenderte mejor: manejo del estrés, regulación del sueño, migraña, participación social y relaciones.</p>
-                <a href="https://wa.me/34613024556?text=Hola%20Laura%20👋%20Soy%20adulto%20neurodivergente%20y%20busco%20mejorar%20mi%20regulación%20del%20estrés%20y%20sueño.%20¿Puedo%20agendar%20una%20consulta%20gratuita%20contigo?" class="btn" target="_blank">Iniciar ahora</a>
+    <!-- ¿EN QUÉ PUEDO AYUDARTE? -->
+    <section class="light-bg">
+        <div class="container">
+            <h2>¿En qué puedo ayudarte?</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-subtitle">Personas adultas neurodivergentes</div>
+                    <h3>Si vives con sobrecarga</h3>
+                    <p>Si vives con sobrecarga, cansancio o la sensación de ir siempre a contracorriente, te ayudo a entender cómo funciona tu sistema nervioso y qué cambios tienen sentido en tu día a día.</p>
+                    <a href="https://wa.me/34613024556?text=Hola%20Laura.%20Me%20gustaría%20saber%20más%20sobre%20tus%20sesiones%20online%20para%20personas%20adultas." class="btn-primary" target="_blank">Escríbeme por WhatsApp</a>
+                </div>
+                <div class="card">
+                    <div class="card-subtitle">Cuando el cuerpo también lo nota</div>
+                    <h3>Estrés, sueño, sensorialidad</h3>
+                    <p>Estrés mantenido, descanso que no repara, dolores de cabeza frecuentes o saturación sensorial. Trabajamos pautas de regulación, rutinas y entorno, en coordinación con tu médico.</p>
+                    <p style="font-size: 0.85em; color: var(--texto-secundario); margin-top: 16px;"><strong>Nota:</strong> Complementa, pero no sustituye, la atención médica.</p>
+                    <a href="https://wa.me/34613024556?text=Hola%20Laura.%20Me%20interesa%20tu%20método%20de%20las%206%20esferas%20y%20me%20gustaría%20saber%20si%20encaja%20conmigo." class="btn-primary" target="_blank">Escríbeme por WhatsApp</a>
+                </div>
+                <div class="card">
+                    <div class="card-subtitle">Familias de adolescentes</div>
+                    <h3>Apoyo para tu hijo o hija</h3>
+                    <p>¿Buscas apoyo para tu hijo o hija adolescente? Lo hago desde Proyecto PasiTOs, el centro que dirijo, también en sesiones online.</p>
+                    <a href="https://www.proyectopasitos.es/sesiones-online" class="btn-primary" target="_blank">Ver sesiones online en PasiTOs</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CÓMO FUNCIONA -->
-    <section id="proceso" style="background: var(--white);">
-        <h2>¿Cómo funciona?</h2>
-        <div class="process">
-            <div class="process-step">
-                <span class="number">1</span>
-                <h4>Consulta Inicial</h4>
-                <p>15 minutos GRATIS vía WhatsApp. Cuéntame qué te trae, sin compromiso ninguno.</p>
+    <!-- MI MÉTODO: 6 ESFERAS -->
+    <section class="velo-bg" id="metodo">
+        <div class="container">
+            <h2>Mi método: las 6 esferas</h2>
+            <div class="method-intro">
+                <p>Es una metodología propia de autodescubrimiento. Analizamos tu estilo de vida y tu contexto en seis esferas para ver qué te da energía, qué te la quita y qué cambios tienen sentido para ti.</p>
             </div>
-            <div class="process-step">
-                <span class="number">2</span>
-                <h4>Evaluación Integral</h4>
-                <p>Análisis profundo: sensorialidad, sueño, estrés, contexto. Encontramos la raíz juntos.</p>
+            <div class="esferas-grid">
+                <div class="esfera">
+                    <div class="esfera-num">1</div>
+                    <h3>Sistema nervioso</h3>
+                    <p>Qué te activa, qué te calma y cómo te afecta el entorno.</p>
+                </div>
+                <div class="esfera">
+                    <div class="esfera-num">2</div>
+                    <h3>Alimentación</h3>
+                    <p>Cómo comes en tu día a día y cómo se relaciona con tu energía.</p>
+                </div>
+                <div class="esfera">
+                    <div class="esfera-num">3</div>
+                    <h3>Ocio y tiempo libre</h3>
+                    <p>Qué te recarga de verdad y cuánto espacio tiene en tu semana.</p>
+                </div>
+                <div class="esfera">
+                    <div class="esfera-num">4</div>
+                    <h3>Sueño y descanso</h3>
+                    <p>Tus rutinas de descanso y lo que las facilita o las dificulta.</p>
+                </div>
+                <div class="esfera">
+                    <div class="esfera-num">5</div>
+                    <h3>Esfera social</h3>
+                    <p>Tus valores, tus metas y lo que da sentido a tus días.</p>
+                </div>
+                <div class="esfera">
+                    <div class="esfera-num">6</div>
+                    <h3>Contexto</h3>
+                    <p>Tu casa, tu trabajo o tus estudios y tus relaciones. Tu entorno también regula.</p>
+                </div>
             </div>
-            <div class="process-step">
-                <span class="number">3</span>
-                <h4>Plan Personalizado</h4>
-                <p>Estrategias OT + PNI prácticas. Herramientas que funcionan en casa, colegio, trabajo.</p>
+            <div class="method-intro" style="margin-top: 80px;">
+                <p>La primera evaluación termina con el mapa de tus 6 esferas, un esquema que dibujamos en sesión y que guía tu plan. El objetivo es un estilo de vida que encaje contigo, sin intentar cambiar quién eres.</p>
             </div>
-            <div class="process-step">
-                <span class="number">4</span>
-                <h4>Acompañamiento</h4>
-                <p>Sesiones semanales/quincenales. Seguimiento continuo y progreso medible.</p>
+            <div class="method-intro" style="margin-top: 60px; background: var(--fondo); padding: 32px; border-radius: var(--radio-lg); font-size: 0.9em;">
+                <p><strong>En qué me baso:</strong> Neurociencia del cuerpo (cómo se relacionan cerebro, respiración, corazón e intestino) · La respiración como herramienta de regulación · Psiconeuroinmunología · Alimentación y microbiota, en coordinación con dietista-nutricionista cuando hace falta · Hábitos y ritmos (luz, sueño, comida, movimiento) que se asocian con la salud · Terapia ocupacional: lo que haces cada día y el sentido que tiene para ti.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿CÓMO FUNCIONA? -->
+    <section id="como-trabajo">
+        <div class="container">
+            <h2>¿Cómo funciona?</h2>
+            <div class="process">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h3>Llamada inicial</h3>
+                    <p>15 minutos, gratuita. Me cuentas qué te trae y vemos si puedo ayudarte.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h3>Evaluación de tus 6 esferas</h3>
+                    <p>Revisamos tu perfil sensorial, tus rutinas y tu contexto.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h3>Plan personalizado</h3>
+                    <p>Acordamos objetivos concretos y pautas de terapia ocupacional y PNI que encajen en tu día a día.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <h3>Acompañamiento</h3>
+                    <p>Sesiones online semanales o quincenales. Revisamos los objetivos cada mes y ajustamos el plan.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- SOBRE MÍ -->
-    <section class="light" id="sobre-mi">
-        <h2>Sobre mí</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <h3>Especializada en neurodivergencia</h3>
-                <p>Soy Terapeuta Ocupacional con especialización en Psiconeuroinmunología (PNI) e Integración Sensorial. Mi pasión es acompañar a personas neurodivergentes a <strong>entenderse mejor</strong>.</p>
-                <p>Durante 10+ años he acompañado a familias y adultos que creían tener "problemas de comportamiento"... cuando en realidad eran patrones sensoriales, regulación del sistema nervioso y contextos no adaptados.</p>
-                <p><strong>Mi convicción:</strong> Si entiendes CÓMO procesa tu mente y tu cuerpo, puedes diseñar una vida que funcione para ti.</p>
-                <ul class="about-list">
-                    <li>10+ años de experiencia clínica</li>
-                    <li>400+ familias y adultos acompañados</li>
-                    <li>Especialización en TDAH, TEA, PDA</li>
-                    <li>Formación continua en neurociencia</li>
-                    <li>100% online (Zoom/Google Meet)</li>
-                    <li>Enfoque completamente personalizado</li>
-                </ul>
-            </div>
-            <div class="about-img">
-                <img src="img/laura.jpg" alt="Laura Fajardo - Terapeuta Ocupacional" loading="lazy">
+    <section class="light-bg" id="sobre-mi">
+        <div class="container">
+            <h2>Sobre mí</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>Terapeuta ocupacional y psiconeuroinmunóloga clínica</h3>
+                    <p>Soy terapeuta ocupacional y psiconeuroinmunóloga clínica, con más de 10 años de experiencia clínica, y dirijo Proyecto PasiTOs.</p>
+                    <p>En consulta veo a menudo a personas que llevan años oyendo que es cuestión de actitud. Lo que suele haber detrás es un sistema nervioso que procesa el mundo de otra manera y un entorno que no está pensado para él.</p>
+                    <p>Por eso trabajo con una idea sencilla: si entiendes cómo procesan tu cuerpo y tu mente, puedes diseñar una vida que funcione para ti.</p>
+                    <ul class="about-creds">
+                        <li>Colegiada nº 46400519</li>
+                        <li>Más de 10 años de experiencia clínica</li>
+                        <li>Directora de Proyecto PasiTOs, centro autorizado por la Comunidad de Madrid (S8268)</li>
+                        <li>Más de 400 familias acompañadas en Proyecto PasiTOs</li>
+                        <li>Formación en PNI clínica e integración sensorial (PNI Europe 2022-2025)</li>
+                        <li>Experiencia con TDAH, autismo y perfiles PDA</li>
+                    </ul>
+                </div>
+                <div class="about-img">
+                    <img src="img/laura.jpg" alt="Laura Fajardo, terapeuta ocupacional, en su espacio de trabajo" loading="lazy">
+                </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ -->
-    <section id="faq" style="background: var(--white);">
-        <h2>Preguntas Frecuentes</h2>
-        <div class="faq-container">
-            <div class="faq-item">
-                <div class="faq-question">¿Cuándo empezaré a ver resultados? <span>▼</span></div>
-                <div class="faq-answer">La mayoría de mis clientes notan cambios en 2-3 sesiones: mejor sueño, menos reactividad sensorial, mayor concentración. Los cambios profundos se consolidan en 8-12 semanas de acompañamiento.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">¿Es realmente 100% online? ¿Funciona sin presencia? <span>▼</span></div>
-                <div class="faq-answer">Sí, 100% online vía Zoom. Funciona mejor que presencial porque trabajamos EN TU CONTEXTO REAL: tu habitación, casa, colegio. Puedo ver tu espacio, entender tu rutina y diseñar estrategias que encajen en tu vida.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">¿Cuánto cuesta? <span>▼</span></div>
-                <div class="faq-answer"><strong>Consulta inicial (15 min): GRATIS.</strong> Las sesiones regulares varían según el plan de acompañamiento que necesites. Hablamos de presupuesto en la consulta, sin compromiso.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">¿Qué necesito para las sesiones? <span>▼</span></div>
-                <div class="faq-answer">Solo: conexión a internet, un dispositivo (computadora, tablet o móvil) y un espacio tranquilo. Yo guío todo el proceso. No necesitas preparar nada especial.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">¿Garantizas resultados? <span>▼</span></div>
-                <div class="faq-answer">No hay garantías porque cada persona es única. Pero mi tasa de mejora es 85%+. Si después de 3 sesiones no sientes progreso real, revisamos el plan juntos y lo ajustamos.</div>
+    <section id="preguntas">
+        <div class="container">
+            <h2>Preguntas frecuentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">¿Qué es la PNI? <span>▼</span></button>
+                    <div class="faq-answer">La psiconeuroinmunología estudia cómo se relacionan el sistema nervioso, el inmunitario, el hormonal y las emociones. En mis sesiones la uso como marco para revisar hábitos como el descanso, la alimentación, el movimiento o el estrés, desde la terapia ocupacional.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">¿Sustituye a mi médico o a mi tratamiento? <span>▼</span></button>
+                    <div class="faq-answer">No. Complementa, pero no sustituye, la atención médica ni la medicación que tengas pautada. Si lo necesitas, me coordino con tus profesionales de referencia.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">¿Cuánto dura el proceso? <span>▼</span></button>
+                    <div class="faq-answer">Depende de cada persona. En la evaluación acordamos objetivos concretos y los revisamos cada mes para decidir cómo seguir.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">¿Funciona igual online? <span>▼</span></button>
+                    <div class="faq-answer">Online trabajo en tu entorno real: puedo ver tu espacio, entender tu rutina y adaptar las pautas a tu día a día.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">¿Cuánto cuesta? <span>▼</span></button>
+                    <div class="faq-answer">La primera llamada de 15 minutos es gratuita. Para conocer tarifas, escríbeme por WhatsApp y hablamos sin compromiso.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">¿Qué necesito para las sesiones? <span>▼</span></button>
+                    <div class="faq-answer">Conexión a internet, un ordenador, una tablet o un móvil y un espacio tranquilo. Las sesiones son por Google Meet.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">¿Garantizas resultados? <span>▼</span></button>
+                    <div class="faq-answer">No. Ningún profesional sanitario puede garantizarlos. Lo que sí hago es acordar objetivos medibles contigo y revisar el plan si no avanzamos.</div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- CTA FINAL -->
-    <section style="padding: 80px 32px;">
+    <section style="padding: 60px 32px; background: var(--fondo);">
         <div class="cta-final">
-            <h2>¿Listo para cambiar las cosas?</h2>
-            <p>Tu consulta inicial de 15 minutos es GRATIS. Sin costo, sin compromiso. Solo para conocernos y entender si podemos trabajar juntos hacia cambios reales.</p>
-            <a href="https://wa.me/34613024556?text=Hola%20Laura%20👋%20Me%20interesa%20tu%20trabajo%20con%20neurodivergentes.%20Me%20gustaría%20agendar%20una%20consulta%20gratuita%20para%20conocer%20mejor%20tu%20enfoque.%20¿Cuándo%20estás%20disponible?" class="btn" target="_blank">📱 Solicita tu consulta por WhatsApp</a>
+            <h2>¿Hablamos?</h2>
+            <p>La primera llamada dura 15 minutos y es gratuita. Sirve para conocernos y ver si mi forma de trabajar encaja con lo que necesitas.</p>
+            <a href="https://wa.me/34613024556?text=Hola%20Laura.%20Vengo%20de%20tu%20web%20y%20me%20gustaría%20reservar%20la%20llamada%20gratuita%20de%2015%20minutos." class="btn-primary" target="_blank">Escríbeme por WhatsApp</a>
+            <p class="hero-subtext" style="margin-top: 24px;">O si prefieres correo: hola@laurafajardo.com</p>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
         <div class="container">
-            <p><strong>Laura Fajardo</strong></p>
-            <p>Terapeuta Ocupacional • Psiconeuroinmunología • Salud Integrativa</p>
+            <p><strong>Laura Fajardo Horno</strong></p>
+            <p>Terapeuta ocupacional colegiada nº 46400519</p>
+            <p>Directora de <a href="https://www.proyectopasitos.es" target="_blank" style="color: var(--turquesa); text-decoration: none;">Proyecto PasiTOs</a></p>
             <div class="footer-links">
-                <a href="https://wa.me/34613024556" target="_blank">WhatsApp: +34 613 024 556</a>
-                <a href="https://instagram.com" target="_blank">Instagram</a>
-                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://wa.me/34613024556" target="_blank">WhatsApp +34 613 024 556</a>
+                <a href="https://www.linkedin.com/in/laura-fajardo-horno-66b02122/" target="_blank">LinkedIn</a>
             </div>
-            <p style="margin-top: 42px; font-size: 0.87em; opacity: 0.78;">© 2026 Laura Fajardo. Todos los derechos reservados.</p>
+            <div class="footer-legal">
+                <p>Las sesiones complementan, pero no sustituyen, la atención médica.</p>
+                <p style="margin-top: 16px;">© 2026 Laura Fajardo. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 
     <script>
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', function() {
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', function() {
                 const answer = this.nextElementSibling;
                 const isActive = answer.classList.contains('active');
                 document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('active'));
-                document.querySelectorAll('.faq-question').forEach(q => q.style.background = 'transparent');
-                if (!isActive) { answer.classList.add('active'); this.style.background = 'var(--light)'; }
+                if (!isActive) answer.classList.add('active');
             });
         });
     </script>
