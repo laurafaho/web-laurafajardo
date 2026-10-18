@@ -140,22 +140,10 @@
             color: var(--pizarra);
         }
 
-        .hero-text p {
+        .lf-entradilla {
+            font-size: 20px;
+            line-height: 1.6;
             color: var(--texto-secundario);
-            margin-bottom: 16px;
-            line-height: 1.8;
-            max-width: 68ch;
-        }
-
-        .hero-credentials {
-            font-size: 0.9em;
-            color: var(--texto-secundario);
-            margin-top: 40px;
-            padding-top: 24px;
-            border-top: 1px solid var(--borde-suave);
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
         }
 
         .hero-cta {
@@ -224,7 +212,7 @@
             margin-top: 16px;
         }
 
-        /* SECCIONES */
+        /* SECCIONES GENERALES */
         section {
             padding: 120px 32px;
         }
@@ -244,6 +232,192 @@
             text-align: center;
             margin-bottom: 80px;
             color: var(--pizarra);
+        }
+
+        /* ===== DESIGN SYSTEM V2.2 ===== */
+        :root {
+            --marca-pizarra: #3D5A5A;
+            --marca-pizarra-profunda: #2B4242;
+            --marca-turquesa: #1BA898;
+            --marca-turquesa-profunda: #147B6F;
+            --marca-turquesa-claro: #BFE8E1;
+            --marca-arena: #F7F3EE;
+            --fondo-pagina: #FFFFFF;
+            --fondo-niebla: #F8FAF9;
+            --fondo-arena: var(--marca-arena);
+            --fondo-tarjeta: #FFFFFF;
+            --fondo-velo: #E8F5F2;
+            --fondo-oscuro: var(--marca-pizarra-profunda);
+            --texto-principal: var(--marca-pizarra);
+            --texto-secundario: #5C6E6D;
+            --texto-enlace: var(--marca-turquesa-profunda);
+            --texto-sobre-oscuro: #FFFFFF;
+            --texto-sobre-oscuro-secundario: #B9CCC8;
+            --enlace-sobre-oscuro: #8FE0D3;
+            --accion-fondo: var(--marca-turquesa-profunda);
+            --accion-fondo-hover: #11695F;
+            --accion-texto: #FFFFFF;
+            --borde-suave: #E5EBE8;
+            --borde-control: #768C89;
+            --foco: var(--marca-turquesa-profunda);
+            --estado-error: #B3261E;
+            --estado-exito: #1E6B45;
+            --font-display: "Montserrat", "Avenir Next", "Segoe UI", Arial, sans-serif;
+            --font-body: "Nunito Sans", "Segoe UI", Arial, sans-serif;
+            --espacio-1: 8px;
+            --espacio-2: 16px;
+            --espacio-3: 24px;
+            --espacio-4: 32px;
+            --espacio-6: 48px;
+            --espacio-8: 64px;
+            --espacio-12: 96px;
+            --radio-sm: 8px;
+            --radio-md: 16px;
+            --radio-lg: 24px;
+            --radio-pill: 999px;
+            --sombra-suave: 0 2px 8px rgba(43, 66, 66, 0.08);
+            --ancho-lectura: 68ch;
+            --ancho-maximo: 1120px;
+            --objetivo-tactil: 44px;
+        }
+
+        .lf-contenedor { width: 100%; max-width: var(--ancho-maximo); margin-inline: auto; padding-inline: var(--espacio-3); }
+        .lf-seccion { padding-block: var(--espacio-8); }
+        .lf-seccion--arena { background: var(--fondo-arena); }
+        .lf-cabeza-seccion { display: flex; flex-direction: column; gap: var(--espacio-1); max-width: var(--ancho-lectura); }
+        .lf-etiqueta { font-size: 14px; line-height: 1.4; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--texto-enlace); }
+        .lf-sr { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+        a, button, summary { -webkit-tap-highlight-color: transparent; }
+        .lf-ico { fill: none; stroke: var(--texto-enlace); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        #te-suena, #proceso, .lf-desplegables { font-family: var(--font-body); font-size: 18px; line-height: 1.65; color: var(--texto-principal); }
+        #te-suena h2, #te-suena h3, #proceso h2, #proceso h3, #proceso h4 { margin: 0; font-family: var(--font-display); font-weight: 600; color: var(--texto-principal); text-wrap: balance; }
+        #te-suena h2, #proceso h2 { font-size: 34px; line-height: 1.15; }
+        #te-suena h3, #proceso h3 { font-size: 22px; line-height: 1.3; }
+        #te-suena p, #proceso p { margin: 0; max-width: var(--ancho-lectura); }
+        #te-suena :focus-visible, #proceso :focus-visible, #preguntas :focus-visible { outline: 2px solid var(--foco); outline-offset: 2px; }
+        @media (max-width: 767px) {
+            .lf-contenedor { padding-inline: var(--espacio-2); }
+            .lf-seccion { padding-block: var(--espacio-6); }
+            .lf-entradilla { font-size: 18px; }
+            #te-suena h2, #proceso h2 { font-size: 27px; line-height: 1.2; }
+            #te-suena h3, #proceso h3 { font-size: 20px; }
+        }
+
+        .lf-btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: var(--espacio-1);
+            min-height: var(--objetivo-tactil); padding: 10px var(--espacio-3);
+            border: 2px solid transparent; border-radius: var(--radio-pill);
+            font-family: var(--font-body); font-size: 17px; line-height: 1.3; font-weight: 700;
+            text-align: center; text-decoration: none; cursor: pointer;
+        }
+        .lf-btn svg { width: 20px; height: 20px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        .lf-btn--primario { background: var(--accion-fondo); color: var(--accion-texto); }
+        .lf-btn--primario:hover { background: var(--accion-fondo-hover); }
+        .lf-btn--secundario { background: transparent; color: var(--texto-enlace); border-color: var(--texto-enlace); }
+        .lf-btn--secundario:hover { background: var(--fondo-velo); }
+        .lf-btn--claro { background: var(--texto-sobre-oscuro); color: var(--fondo-oscuro); }
+        .lf-btn--claro:hover { background: var(--marca-turquesa-claro); }
+        @media (prefers-reduced-motion: no-preference) { .lf-btn { transition: background-color 0.15s ease; } }
+
+        .lf-nota-salud {
+            display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: var(--espacio-2); align-items: start;
+            max-width: var(--ancho-lectura); margin-top: var(--espacio-3); padding: var(--espacio-3);
+            background: var(--fondo-velo); border: 1px solid var(--borde-suave); border-radius: var(--radio-lg);
+        }
+        .lf-seccion--velo .lf-nota-salud { background: var(--fondo-tarjeta); }
+        .lf-nota-salud svg { width: 24px; height: 24px; fill: none; stroke: var(--texto-enlace); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        .lf-nota-salud p { font-size: 17px; line-height: 1.6; }
+
+        .lf-senales { list-style: none; margin: var(--espacio-4) 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--espacio-2); }
+        .lf-senales li {
+            display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 12px; align-items: start;
+            padding: var(--espacio-2); background: var(--fondo-tarjeta); border: 1px solid var(--borde-suave); border-radius: var(--radio-md);
+            font-size: 17px; line-height: 1.55;
+        }
+        .lf-senales svg { width: 28px; height: 28px; padding: 5px; border-radius: var(--radio-pill); background: var(--fondo-velo); }
+        .lf-te-suena__valida { margin-top: var(--espacio-4); max-width: 60ch; font-family: var(--font-display); font-size: 22px; line-height: 1.4; font-weight: 500; color: var(--texto-principal); }
+        .lf-te-suena__porque { max-width: 820px; margin-top: var(--espacio-6); }
+        .lf-te-suena__trabajo { margin-top: var(--espacio-2); padding-top: var(--espacio-2); border-top: 1px dashed var(--borde-control); }
+        .lf-te-suena__propuesta { max-width: 820px; margin-top: var(--espacio-6); padding: var(--espacio-4); background: var(--fondo-tarjeta); border: 1px solid var(--borde-suave); border-radius: var(--radio-lg); }
+        .lf-te-suena__propuesta > p { margin-top: var(--espacio-1); }
+        .lf-acciones { display: flex; flex-wrap: wrap; gap: var(--espacio-2); margin-top: var(--espacio-3); }
+        @media (max-width: 767px) {
+            .lf-te-suena__valida { font-size: 19px; }
+            .lf-te-suena__propuesta { padding: var(--espacio-3); }
+        }
+
+        .lf-proceso { display: grid; grid-template-columns: minmax(0, 320px) minmax(0, 1fr); gap: var(--espacio-4); align-items: start; margin-top: var(--espacio-4); scroll-margin-top: 88px; }
+        .lf-proceso__lista { position: relative; display: flex; flex-direction: column; gap: var(--espacio-1); }
+        .lf-proceso__lista::before { content: ""; position: absolute; left: 35px; top: 28px; bottom: 28px; width: 2px; background: var(--borde-suave); }
+        .lf-proceso__tab {
+            position: relative; display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 12px; align-items: center;
+            width: 100%; min-width: 0; min-height: var(--objetivo-tactil); padding: 12px var(--espacio-2);
+            background: transparent; border: 1px solid transparent; border-radius: var(--radio-md);
+            color: var(--texto-principal); font: inherit; text-align: left; cursor: pointer;
+        }
+        .lf-proceso__tab:hover { background: var(--fondo-niebla); }
+        .lf-proceso__tab[aria-selected="true"] { background: var(--fondo-velo); border-color: var(--borde-suave); }
+        .lf-proceso__num {
+            display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: var(--radio-pill);
+            background: var(--fondo-pagina); border: 2px solid var(--texto-enlace); color: var(--texto-enlace);
+            font-family: var(--font-display); font-weight: 600;
+        }
+        .lf-proceso__tab[aria-selected="true"] .lf-proceso__num { background: var(--accion-fondo); border-color: var(--accion-fondo); color: var(--accion-texto); }
+        .lf-proceso__titulo { display: block; font-family: var(--font-display); font-size: 17px; font-weight: 600; line-height: 1.3; }
+        .lf-proceso__meta { display: block; font-size: 14px; line-height: 1.4; color: var(--texto-secundario); }
+        .lf-proceso__corto { display: none; }
+        .lf-proceso__paneles { display: flex; flex-direction: column; gap: var(--espacio-3); min-width: 0; }
+        .lf-proceso__panel { padding: var(--espacio-4); background: var(--fondo-tarjeta); border: 1px solid var(--borde-suave); border-radius: var(--radio-lg); }
+        .lf-proceso__panel h3 { margin-top: 4px; }
+        .lf-proceso__panel > p { margin-top: var(--espacio-1); color: var(--texto-secundario); }
+        .lf-proceso__columnas { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--espacio-3); margin-top: var(--espacio-3); }
+        .lf-proceso__bloque h4 { margin: 0 0 4px; font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--texto-principal); }
+        .lf-proceso__bloque p { font-size: 17px; }
+        .lf-chips { list-style: none; display: flex; flex-wrap: wrap; gap: var(--espacio-1); margin: var(--espacio-3) 0 0; padding: 0; }
+        .lf-chip { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: var(--radio-pill); background: var(--fondo-velo); color: var(--texto-principal); font-size: 14px; line-height: 1.5; }
+        .lf-chip svg { width: 16px; height: 16px; flex: none; }
+        .lf-proceso__acciones { display: flex; flex-wrap: wrap; gap: var(--espacio-2); margin-top: var(--espacio-3); }
+        .lf-proceso:not(.is-interactivo) { grid-template-columns: minmax(0, 1fr); }
+        .lf-proceso:not(.is-interactivo) .lf-proceso__lista,
+        .lf-proceso:not(.is-interactivo) .lf-proceso__siguiente { display: none; }
+        @media (max-width: 767px) {
+            .lf-proceso { grid-template-columns: minmax(0, 1fr); gap: var(--espacio-2); }
+            .lf-proceso__lista { flex-direction: row; gap: 4px; }
+            .lf-proceso__lista::before { left: 12%; right: 12%; top: 27px; bottom: auto; width: auto; height: 2px; }
+            .lf-proceso__tab { flex: 1 1 0; grid-template-columns: minmax(0, 1fr); justify-items: center; gap: 4px; padding: 8px 2px; text-align: center; }
+            .lf-proceso__titulo, .lf-proceso__meta { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+            .lf-proceso__corto { display: block; font-size: 12px; font-weight: 700; line-height: 1.3; white-space: nowrap; }
+            .lf-proceso__panel { padding: var(--espacio-3); }
+        }
+        @media (max-width: 359px) {
+            .lf-proceso__corto { display: none; }
+        }
+
+        .lf-pni { max-width: 820px; margin-top: var(--espacio-8); }
+        .lf-desplegables { display: flex; flex-direction: column; gap: var(--espacio-2); margin-top: var(--espacio-3); }
+        .lf-faq { max-width: 820px; margin-top: var(--espacio-4); }
+        .lf-desplegable { background: var(--fondo-tarjeta); border: 1px solid var(--borde-suave); border-radius: var(--radio-md); }
+        .lf-desplegable summary {
+            display: flex; align-items: center; justify-content: space-between; gap: var(--espacio-2);
+            min-height: var(--objetivo-tactil); padding: var(--espacio-2) var(--espacio-3);
+            font-family: var(--font-display); font-size: 18px; font-weight: 600; line-height: 1.3; list-style: none; cursor: pointer;
+        }
+        .lf-desplegable summary::-webkit-details-marker { display: none; }
+        .lf-desplegable summary::after {
+            content: ""; flex: none; width: 16px; height: 16px;
+            background:
+                linear-gradient(var(--texto-enlace), var(--texto-enlace)) center / 3px 100% no-repeat,
+                linear-gradient(var(--texto-enlace), var(--texto-enlace)) center / 100% 3px no-repeat;
+        }
+        .lf-desplegable[open] summary::after { background: linear-gradient(var(--texto-enlace), var(--texto-enlace)) center / 100% 3px no-repeat; }
+        .lf-desplegable[open] summary { border-bottom: 1px solid var(--borde-suave); }
+        .lf-desplegable summary:focus-visible { border-radius: var(--radio-md); }
+        .lf-desplegable > div { padding: var(--espacio-2) var(--espacio-3) var(--espacio-3); }
+        .lf-desplegable p { font-size: 17px; }
+        @media (max-width: 767px) {
+            .lf-pni { margin-top: var(--espacio-6); }
+            .lf-desplegable summary { padding-inline: var(--espacio-2); font-size: 17px; }
+            .lf-desplegable > div { padding-inline: var(--espacio-2); }
         }
 
         /* TARJETAS */
@@ -266,7 +440,7 @@
         }
 
         .card:hover {
-            border-color: var(--turquesa-profunda);
+            border-color: var(--turqueza-profunda);
             box-shadow: 0 20px 60px rgba(20, 123, 111, 0.15);
             transform: translateY(-8px);
         }
@@ -300,193 +474,6 @@
             width: 100%;
             text-align: center;
             justify-content: center;
-        }
-
-        /* PROCESO INTERACTIVO */
-        .lf-proceso {
-            display: grid;
-            grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
-            gap: 32px;
-            align-items: start;
-            margin-top: 32px;
-            max-width: 1140px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .lf-proceso__lista {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .lf-proceso__lista::before {
-            content: "";
-            position: absolute;
-            left: 35px;
-            top: 28px;
-            bottom: 28px;
-            width: 2px;
-            background: var(--borde-suave);
-        }
-
-        .lf-proceso__tab {
-            position: relative;
-            display: grid;
-            grid-template-columns: 40px minmax(0, 1fr);
-            gap: 12px;
-            align-items: center;
-            width: 100%;
-            min-width: 0;
-            min-height: 44px;
-            padding: 12px 16px;
-            background: transparent;
-            border: 1px solid transparent;
-            border-radius: var(--radio-md);
-            color: var(--pizarra);
-            font: inherit;
-            text-align: left;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .lf-proceso__tab:hover {
-            background: var(--fondo-niebla);
-        }
-
-        .lf-proceso__tab[aria-selected="true"] {
-            background: var(--fondo-velo);
-            border-color: var(--borde-suave);
-        }
-
-        .lf-proceso__num {
-            display: inline-grid;
-            place-items: center;
-            width: 40px;
-            height: 40px;
-            border-radius: var(--radio-pill);
-            background: var(--fondo);
-            border: 2px solid var(--turquesa-profunda);
-            color: var(--turquesa-profunda);
-            font-family: var(--font-display);
-            font-weight: 600;
-        }
-
-        .lf-proceso__tab[aria-selected="true"] .lf-proceso__num {
-            background: var(--turquesa-profunda);
-            border-color: var(--turquesa-profunda);
-            color: var(--fondo);
-        }
-
-        .lf-proceso__titulo {
-            display: block;
-            font-family: var(--font-display);
-            font-size: 17px;
-            font-weight: 600;
-            line-height: 1.3;
-        }
-
-        .lf-proceso__meta {
-            display: block;
-            font-size: 14px;
-            line-height: 1.4;
-            color: var(--texto-secundario);
-        }
-
-        .lf-proceso__paneles {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-            min-width: 0;
-        }
-
-        .lf-proceso__panel {
-            padding: 32px;
-            background: var(--fondo);
-            border: 1px solid var(--borde-suave);
-            border-radius: var(--radio-lg);
-        }
-
-        .lf-proceso__panel h3 {
-            font-family: var(--font-display);
-            font-size: 22px;
-            font-weight: 600;
-            margin-top: 4px;
-            margin-bottom: 16px;
-        }
-
-        .lf-proceso__panel > p {
-            margin-top: 8px;
-            color: var(--texto-secundario);
-        }
-
-        /* DESPLEGABLES */
-        .lf-desplegables {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-top: 32px;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .lf-desplegable {
-            background: var(--fondo);
-            border: 1px solid var(--borde-suave);
-            border-radius: var(--radio-md);
-        }
-
-        .lf-desplegable summary {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 16px;
-            min-height: 44px;
-            padding: 16px 24px;
-            font-family: var(--font-display);
-            font-size: 18px;
-            font-weight: 600;
-            line-height: 1.3;
-            list-style: none;
-            cursor: pointer;
-        }
-
-        .lf-desplegable summary::-webkit-details-marker {
-            display: none;
-        }
-
-        .lf-desplegable summary::after {
-            content: "";
-            flex: none;
-            width: 16px;
-            height: 16px;
-            background:
-                linear-gradient(var(--turquesa-profunda), var(--turquesa-profunda)) center / 3px 100% no-repeat,
-                linear-gradient(var(--turquesa-profunda), var(--turquesa-profunda)) center / 100% 3px no-repeat;
-        }
-
-        .lf-desplegable[open] summary::after {
-            background: linear-gradient(var(--turquesa-profunda), var(--turquesa-profunda)) center / 100% 3px no-repeat;
-        }
-
-        .lf-desplegable[open] summary {
-            border-bottom: 1px solid var(--borde-suave);
-        }
-
-        .lf-desplegable summary:hover {
-            background: var(--fondo-niebla);
-        }
-
-        .lf-desplegable > div {
-            padding: 16px 24px 24px;
-        }
-
-        .lf-desplegable p {
-            font-size: 17px;
-            color: var(--texto-secundario);
-            line-height: 1.8;
         }
 
         /* MÉTODO 6 ESFERAS */
@@ -526,124 +513,6 @@
             color: var(--texto-secundario);
             line-height: 1.8;
             font-size: 0.95em;
-        }
-
-        /* SOBRE MÍ */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: start;
-            max-width: 1140px;
-            margin: 0 auto;
-        }
-
-        .about-text h3 {
-            font-family: var(--font-display);
-            font-size: 2em;
-            font-weight: 600;
-            margin-bottom: 32px;
-            color: var(--pizarra);
-        }
-
-        .about-text p {
-            color: var(--pizarra);
-            margin-bottom: 24px;
-            line-height: 2;
-            font-size: 1em;
-        }
-
-        .about-creds {
-            list-style: none;
-            margin: 40px 0;
-        }
-
-        .about-creds li {
-            padding: 12px 0;
-            color: var(--pizarra);
-            line-height: 1.9;
-            font-size: 0.95em;
-        }
-
-        .about-creds li:before {
-            content: "✓ ";
-            color: var(--turquesa-profunda);
-            font-weight: 700;
-            margin-right: 12px;
-        }
-
-        .about-img {
-            border-radius: var(--radio-lg);
-            overflow: hidden;
-            box-shadow: 0 28px 70px rgba(45, 66, 66, 0.14);
-        }
-
-        .about-img img {
-            width: 100%;
-            display: block;
-            height: auto;
-        }
-
-        .formacion-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 24px;
-            margin-top: 32px;
-        }
-
-        .formacion-gallery img {
-            width: 100%;
-            border-radius: var(--radio-lg);
-            box-shadow: 0 12px 40px rgba(45, 66, 66, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .formacion-gallery img:hover {
-            transform: scale(1.02);
-        }
-
-        /* FAQ */
-        .faq-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            margin-bottom: 32px;
-            border-bottom: 1px solid var(--borde-suave);
-        }
-
-        .faq-question {
-            cursor: pointer;
-            padding: 24px;
-            background: transparent;
-            border-radius: var(--radio-md);
-            font-weight: 700;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 1.1em;
-            color: var(--pizarra);
-            transition: background 0.3s;
-            border: none;
-            width: 100%;
-        }
-
-        .faq-question:hover {
-            background: var(--fondo-niebla);
-        }
-
-        .faq-answer {
-            padding: 0 24px 24px;
-            display: none;
-            line-height: 1.9;
-            color: var(--texto-secundario);
-            font-size: 0.95em;
-            font-weight: 400;
-        }
-
-        .faq-answer.active {
-            display: block;
         }
 
         /* CTA FINAL */
@@ -722,20 +591,6 @@
                 font-size: 2.4em;
             }
 
-            h2 {
-                font-size: 1.8em;
-                margin-bottom: 60px;
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 50px;
-            }
-
-            .lf-proceso {
-                grid-template-columns: 1fr;
-            }
-
             nav {
                 gap: 30px;
             }
@@ -754,16 +609,12 @@
                 font-size: 1.8em;
             }
 
-            h2 {
-                font-size: 1.5em;
-            }
-
             nav {
                 gap: 16px;
                 font-size: 0.85em;
             }
 
-            .cards, .esferas-grid {
+            .cards {
                 grid-template-columns: 1fr;
             }
 
@@ -771,23 +622,31 @@
                 padding: 60px 32px;
                 margin: 60px auto;
             }
-
-            .lf-proceso__tab {
-                padding: 10px 12px;
-                font-size: 0.9em;
-            }
         }
     </style>
 </head>
 <body>
+    <!-- ICONOS SVG -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+        <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+        <symbol id="i-sn" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></symbol>
+        <symbol id="i-al" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></symbol>
+        <symbol id="i-oc" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></symbol>
+        <symbol id="i-su" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+        <symbol id="i-se" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></symbol>
+        <symbol id="i-co" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+    </svg>
+
     <!-- HEADER -->
     <header>
         <div class="header-content">
             <a href="#" class="logo">Laura Fajardo</a>
             <nav>
+                <a href="#te-suena">¿Te suena?</a>
                 <a href="#metodo">Método</a>
-                <a href="#como-trabajo">Cómo funciona</a>
-                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#proceso">Cómo trabajo</a>
                 <a href="#preguntas">Preguntas</a>
             </nav>
             <a href="https://wa.me/34613024556?text=Hola%20Laura.%20Vengo%20de%20tu%20web%20y%20me%20gustaría%20reservar%20la%20llamada%20gratuita%20de%2015%20minutos." class="btn-header" target="_blank">Escríbeme</a>
@@ -799,26 +658,96 @@
         <div class="hero-content">
             <div>
                 <div class="hero-badge">Terapia Ocupacional + PNI</div>
-                <h1>No es falta de voluntad. Es tu sistema nervioso pidiendo otro plan.</h1>
-                <p>Soy Laura Fajardo, terapeuta ocupacional. Te acompaño online a entender cómo funciona tu sistema nervioso y a construir un estilo de vida que te ayude a regularte y tenga sentido para ti.</p>
+                <h1>¿Vives en alerta, te saturas con facilidad y tu cuerpo lo acaba pagando?</h1>
+                <p class="lf-entradilla">Soy Laura Fajardo, terapeuta ocupacional. Si eres neurodivergente o tienes alta sensibilidad, te acompaño online a entender tu sistema nervioso y a construir un estilo de vida que te ayude a regularte y tenga sentido para ti.</p>
                 <div class="hero-cta">
                     <a href="https://wa.me/34613024556?text=Hola%20Laura.%20Vengo%20de%20tu%20web%20y%20me%20gustaría%20reservar%20la%20llamada%20gratuita%20de%2015%20minutos." class="btn-primary" target="_blank">Escríbeme por WhatsApp</a>
-                    <a href="#metodo" class="btn-secondary">Ver cómo trabajo</a>
+                    <a href="#te-suena" class="btn-secondary">Ver cómo trabajo</a>
                 </div>
                 <p class="hero-subtext">Primera llamada de 15 minutos, gratuita y sin compromiso.</p>
-                <div class="hero-credentials">
-                    <span>Terapeuta ocupacional colegiada nº 46400519</span>
-                    <span>Más de 10 años de experiencia clínica</span>
-                    <span>Directora de Proyecto PasiTOs, centro autorizado por la Comunidad de Madrid (S8268)</span>
-                </div>
             </div>
             <div class="hero-img">
-                <img src="img/laura.jpg" alt="Laura Fajardo, terapeuta ocupacional, en su espacio de trabajo" loading="lazy">
+                <img src="img/laura.jpg" alt="Laura Fajardo, terapeuta ocupacional" loading="lazy">
             </div>
         </div>
     </section>
 
-    <!-- ¿EN QUÉ PUEDO AYUDARTE? -->
+    <!-- ¿TE SUENA? -->
+    <section class="lf-seccion lf-seccion--arena" id="te-suena">
+        <div class="lf-contenedor">
+            <div class="lf-cabeza-seccion">
+                <span class="lf-etiqueta">¿Te suena?</span>
+                <h2>Cuando sientes demasiado, el cuerpo también lo nota</h2>
+                <p class="lf-entradilla">Muchas personas neurodivergentes que llegan a consulta describen una mezcla parecida de alerta, cansancio y molestias en el cuerpo que cuesta entender en conjunto.</p>
+            </div>
+
+            <ul class="lf-senales" aria-label="Señales frecuentes">
+                <li><svg class="lf-ico" aria-hidden="true"><use href="#i-check"/></svg><span>Vives en alerta, como si algo fuera a pasar en cualquier momento.</span></li>
+                <li><svg class="lf-ico" aria-hidden="true"><use href="#i-check"/></svg><span>Los ruidos, las luces, las texturas o las interrupciones te desbordan.</span></li>
+                <li><svg class="lf-ico" aria-hidden="true"><use href="#i-check"/></svg><span>Llegas al final del día con la batería a cero, aunque no hayas hecho nada especial.</span></li>
+                <li><svg class="lf-ico" aria-hidden="true"><use href="#i-check"/></svg><span>Duermes, pero no descansas.</span></li>
+                <li><svg class="lf-ico" aria-hidden="true"><use href="#i-check"/></svg><span>Tienes dolor de cabeza a menudo.</span></li>
+                <li><svg class="lf-ico" aria-hidden="true"><use href="#i-check"/></svg><span>Cuando hay tensión, se te cierra el estómago, se te hincha la tripa o se te hace un nudo.</span></li>
+            </ul>
+
+            <p class="lf-te-suena__valida">Procesar el mundo con más intensidad, en entornos que no están pensados para ti, supone una carga. Muchas personas la notan también en el cuerpo.</p>
+
+            <div class="lf-te-suena__porque">
+                <h3>¿Por qué puede pasar?</h3>
+                <div class="lf-desplegables">
+                    <details class="lf-desplegable">
+                        <summary>Un sistema nervioso al que le cuesta regularse</summary>
+                        <div>
+                            <p>Muchas personas neurodivergentes perciben los estímulos con más intensidad. Si eso se mantiene durante todo el día, al sistema nervioso le cuesta volver a la calma: se queda en modo alerta más tiempo del que necesitas y cuesta desconectar, incluso al dormir. Es lo que llamamos una regulación difícil del sistema nervioso, y se puede trabajar.</p>
+                            <p class="lf-te-suena__trabajo"><strong>En sesión trabajamos:</strong> reconocer tus señales de activación y practicar respiración, pausas y rutinas que te ayuden a bajar la alerta.</p>
+                        </div>
+                    </details>
+                    <details class="lf-desplegable">
+                        <summary>Cuando todo es demasiado: la sobrecarga sensorial</summary>
+                        <div>
+                            <p>Ruidos, luces, interrupciones, multitarea… Los estímulos se van sumando y, cuando superan lo que puedes gestionar, llega la sobrecarga: irritabilidad, bloqueo o necesidad de aislarte.</p>
+                            <p class="lf-te-suena__trabajo"><strong>En sesión trabajamos:</strong> tu perfil sensorial y ajustes concretos en casa, en el trabajo o en tus estudios para que el entorno te reste menos energía.</p>
+                        </div>
+                    </details>
+                    <details class="lf-desplegable">
+                        <summary>Tensión y enmascaramiento: cuando aparece el dolor de cabeza</summary>
+                        <div>
+                            <p>Apretar la mandíbula, subir los hombros o esforzarte todo el día por encajar (lo que se conoce como enmascaramiento o masking) se asocia con tensión y cansancio. Muchas personas lo notan en forma de dolor de cabeza.</p>
+                            <p class="lf-te-suena__trabajo"><strong>En sesión trabajamos:</strong> detectar dónde acumulas tensión, repartir tu energía a lo largo del día y buscar espacios donde no tengas que enmascarar.</p>
+                        </div>
+                    </details>
+                    <details class="lf-desplegable">
+                        <summary>Intestino y cerebro: cuando se nota en la tripa</summary>
+                        <div>
+                            <p>El intestino y el cerebro están en comunicación constante, lo que se conoce como eje intestino-cerebro. Por eso es habitual que el estrés y la saturación se noten también en la tripa: nudo en el estómago, digestiones pesadas o hinchazón.</p>
+                            <p class="lf-te-suena__trabajo"><strong>En sesión trabajamos:</strong> horarios y rutinas de comida, la parte sensorial de comer y momentos de calma antes y después de las comidas. Si hace falta, me coordino con tu médico o con dietista-nutricionista.</p>
+                        </div>
+                    </details>
+                </div>
+                <aside class="lf-nota-salud" role="note">
+                    <svg aria-hidden="true"><use href="#i-info"/></svg>
+                    <p><strong>Complementa, pero no sustituye, la atención médica.</strong> Si tienes dolores de cabeza o molestias digestivas frecuentes, consulta con tu médico para descartar otras causas. Si hace falta, me coordino con tus profesionales.</p>
+                </aside>
+            </div>
+
+            <div class="lf-te-suena__propuesta">
+                <h3>Tu cuerpo no te está fallando: te está avisando</h3>
+                <p>Por eso no miramos cada molestia por separado. Con el Método 6 Esferas revisamos a la vez tu sistema nervioso, tu descanso, tu alimentación, tu ocio, lo que da sentido a tus días y tu contexto, para que tu día a día pese menos.</p>
+                <ul class="lf-chips" aria-label="Qué trabajamos">
+                    <li class="lf-chip">Regulación del sistema nervioso</li>
+                    <li class="lf-chip">Tu perfil sensorial</li>
+                    <li class="lf-chip">Estrategias corporales</li>
+                    <li class="lf-chip">Ajustes en tu entorno</li>
+                </ul>
+                <div class="lf-acciones">
+                    <a class="lf-btn lf-btn--primario" href="https://wa.me/34613024556?text=Hola%2C%20Laura.%20Me%20ha%20resonado%20lo%20que%20cuentas%20en%20tu%20web%20y%20me%20gustar%C3%ADa%20saber%20si%20puedes%20ayudarme." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg>Escríbeme por WhatsApp</a>
+                    <a class="lf-btn lf-btn--secundario" href="#metodo">Ver el Método 6 Esferas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿EN QUÉ PUEDO AYUDARTE? (SIN "CUANDO EL CUERPO...") -->
     <section class="light-bg">
         <div class="container">
             <h2>¿En qué puedo ayudarte?</h2>
@@ -828,13 +757,6 @@
                     <h3>Si vives con sobrecarga</h3>
                     <p>Si vives con sobrecarga, cansancio o la sensación de ir siempre a contracorriente, te ayudo a entender cómo funciona tu sistema nervioso y qué cambios tienen sentido en tu día a día.</p>
                     <a href="https://wa.me/34613024556?text=Hola%20Laura.%20Me%20gustaría%20saber%20más%20sobre%20tus%20sesiones%20online%20para%20personas%20adultas." class="btn-primary" target="_blank">Escríbeme por WhatsApp</a>
-                </div>
-                <div class="card">
-                    <div class="card-subtitle">Cuando el cuerpo también lo nota</div>
-                    <h3>Estrés, sueño, sensorialidad</h3>
-                    <p>Estrés mantenido, descanso que no repara, dolores de cabeza frecuentes o saturación sensorial. Trabajamos pautas de regulación, rutinas y entorno, en coordinación con tu médico.</p>
-                    <p style="font-size: 0.85em; color: var(--texto-secundario); margin-top: 16px;"><strong>Nota:</strong> Complementa, pero no sustituye, la atención médica.</p>
-                    <a href="https://wa.me/34613024556?text=Hola%20Laura.%20Me%20interesa%20tu%20método%20de%20las%206%20esferas%20y%20me%20gustaría%20saber%20si%20encaja%20conmigo." class="btn-primary" target="_blank">Escríbeme por WhatsApp</a>
                 </div>
                 <div class="card">
                     <div class="card-subtitle">Familias de adolescentes</div>
@@ -883,155 +805,155 @@
                     <p>Tu casa, tu trabajo o tus estudios y tus relaciones. Tu entorno también regula.</p>
                 </div>
             </div>
-            <p style="text-align: center; color: var(--pizarra); margin-top: 80px; max-width: 68ch; margin-left: auto; margin-right: auto; line-height: 1.8;">La primera evaluación termina con el mapa de tus 6 esferas, un esquema que dibujamos en sesión y que guía tu plan. El objetivo es un estilo de vida que encaje contigo, sin intentar cambiar quién eres.</p>
-            <div style="margin-top: 60px; background: var(--fondo); padding: 32px; border-radius: var(--radio-lg); font-size: 0.9em; max-width: 68ch; margin-left: auto; margin-right: auto;">
-                <p style="color: var(--pizarra);"><strong>En qué me baso:</strong> Neurociencia del cuerpo (cómo se relacionan cerebro, respiración, corazón e intestino) · La respiración como herramienta de regulación · Psiconeuroinmunología · Alimentación y microbiota, en coordinación con dietista-nutricionista cuando hace falta · Hábitos y ritmos (luz, sueño, comida, movimiento) que se asocian con la salud · Terapia ocupacional: lo que haces cada día y el sentido que tiene para ti.</p>
-            </div>
         </div>
     </section>
 
-    <!-- ¿CÓMO FUNCIONA? - INTERACTIVO -->
-    <section id="como-trabajo">
-        <div class="container">
-            <h2>¿Cómo funciona?</h2>
-            <div class="lf-proceso">
-                <div class="lf-proceso__lista">
-                    <button class="lf-proceso__tab" aria-selected="true" data-panel="0">
-                        <span class="lf-proceso__num">1</span>
-                        <div>
-                            <span class="lf-proceso__titulo">Llamada inicial</span>
-                            <span class="lf-proceso__meta">Conocernos</span>
-                        </div>
+    <!-- ¿CÓMO FUNCIONA? (NUEVO) -->
+    <section class="lf-seccion" id="proceso">
+        <div class="lf-contenedor">
+            <div class="lf-cabeza-seccion">
+                <span class="lf-etiqueta">Cómo trabajo</span>
+                <h2>¿Cómo funciona?</h2>
+                <p class="lf-entradilla">Cuatro pasos, a tu ritmo. Pulsa cada paso para ver qué hacemos y qué te llevas.</p>
+            </div>
+
+            <div class="lf-proceso" data-lf-pasos>
+                <div class="lf-proceso__lista" role="tablist" aria-label="Pasos del proceso">
+                    <button class="lf-proceso__tab" type="button" role="tab" id="paso-1-tab" aria-controls="paso-1" aria-selected="true">
+                        <span class="lf-proceso__num" aria-hidden="true">1</span>
+                        <span><span class="lf-proceso__titulo">Llamada inicial</span><span class="lf-proceso__meta">15 minutos, gratuita</span><span class="lf-proceso__corto" aria-hidden="true">Llamada</span></span>
                     </button>
-                    <button class="lf-proceso__tab" aria-selected="false" data-panel="1">
-                        <span class="lf-proceso__num">2</span>
-                        <div>
-                            <span class="lf-proceso__titulo">Evaluación</span>
-                            <span class="lf-proceso__meta">6 esferas</span>
-                        </div>
+                    <button class="lf-proceso__tab" type="button" role="tab" id="paso-2-tab" aria-controls="paso-2" aria-selected="false">
+                        <span class="lf-proceso__num" aria-hidden="true">2</span>
+                        <span><span class="lf-proceso__titulo">Evaluación de tus 6 esferas</span><span class="lf-proceso__meta">Tu punto de partida</span><span class="lf-proceso__corto" aria-hidden="true">Evaluación</span></span>
                     </button>
-                    <button class="lf-proceso__tab" aria-selected="false" data-panel="2">
-                        <span class="lf-proceso__num">3</span>
-                        <div>
-                            <span class="lf-proceso__titulo">Plan personalizado</span>
-                            <span class="lf-proceso__meta">Objetivos</span>
-                        </div>
+                    <button class="lf-proceso__tab" type="button" role="tab" id="paso-3-tab" aria-controls="paso-3" aria-selected="false">
+                        <span class="lf-proceso__num" aria-hidden="true">3</span>
+                        <span><span class="lf-proceso__titulo">Plan personalizado</span><span class="lf-proceso__meta">Objetivos y pautas</span><span class="lf-proceso__corto" aria-hidden="true">Plan</span></span>
                     </button>
-                    <button class="lf-proceso__tab" aria-selected="false" data-panel="3">
-                        <span class="lf-proceso__num">4</span>
-                        <div>
-                            <span class="lf-proceso__titulo">Acompañamiento</span>
-                            <span class="lf-proceso__meta">Sesiones</span>
-                        </div>
+                    <button class="lf-proceso__tab" type="button" role="tab" id="paso-4-tab" aria-controls="paso-4" aria-selected="false">
+                        <span class="lf-proceso__num" aria-hidden="true">4</span>
+                        <span><span class="lf-proceso__titulo">Acompañamiento</span><span class="lf-proceso__meta">Seguimiento online</span><span class="lf-proceso__corto" aria-hidden="true">Seguimiento</span></span>
                     </button>
                 </div>
 
                 <div class="lf-proceso__paneles">
-                    <div class="lf-proceso__panel" style="display: block;">
+                    <div class="lf-proceso__panel" role="tabpanel" id="paso-1" aria-labelledby="paso-1-tab" tabindex="0">
+                        <span class="lf-etiqueta">Paso 1 de 4</span>
                         <h3>Llamada inicial</h3>
-                        <p>15 minutos, gratuita. Me cuentas qué te trae y vemos si puedo ayudarte.</p>
+                        <p>Una llamada de 15 minutos, gratuita y sin compromiso, para conocernos.</p>
+                        <div class="lf-proceso__columnas">
+                            <div class="lf-proceso__bloque"><h4>Qué hacemos</h4><p>Me cuentas qué te trae y qué has probado hasta ahora. Te explico cómo trabajo y vemos si encaja contigo.</p></div>
+                            <div class="lf-proceso__bloque"><h4>Qué te llevas</h4><p>Una primera orientación y una respuesta clara: si puedo ayudarte o a qué profesional te conviene acudir.</p></div>
+                        </div>
+                        <ul class="lf-chips" aria-label="Datos de la llamada">
+                            <li class="lf-chip">15 minutos</li>
+                            <li class="lf-chip">Gratuita</li>
+                            <li class="lf-chip">Sin compromiso</li>
+                        </ul>
+                        <div class="lf-proceso__acciones">
+                            <button class="lf-btn lf-btn--secundario lf-proceso__siguiente" type="button" data-lf-ir="2">Siguiente: evaluación de tus 6 esferas</button>
+                        </div>
                     </div>
-                    <div class="lf-proceso__panel" style="display: none;">
+
+                    <div class="lf-proceso__panel" role="tabpanel" id="paso-2" aria-labelledby="paso-2-tab" tabindex="0" hidden>
+                        <span class="lf-etiqueta">Paso 2 de 4</span>
                         <h3>Evaluación de tus 6 esferas</h3>
-                        <p>2 sesiones donde revisamos tu perfil sensorial, tus rutinas y tu contexto. Al final tienes el mapa de tus 6 esferas.</p>
+                        <p>Exploramos cómo vives ahora, sin juicios, para ver qué te da energía y qué te la quita.</p>
+                        <div class="lf-proceso__columnas">
+                            <div class="lf-proceso__bloque"><h4>Qué hacemos</h4><p>Revisamos tu perfil sensorial, tu descanso, tu alimentación, tu ocio, lo que da sentido a tus días y tu contexto, con entrevista y cuestionarios.</p></div>
+                            <div class="lf-proceso__bloque"><h4>Qué te llevas</h4><p>El mapa de tus 6 esferas: un esquema claro de dónde se te va la energía y dónde la recuperas.</p></div>
+                        </div>
+                        <ul class="lf-chips" aria-label="Las 6 esferas">
+                            <li class="lf-chip"><svg class="lf-ico" aria-hidden="true"><use href="#i-sn"/></svg>Sistema nervioso</li>
+                            <li class="lf-chip"><svg class="lf-ico" aria-hidden="true"><use href="#i-al"/></svg>Alimentación</li>
+                            <li class="lf-chip"><svg class="lf-ico" aria-hidden="true"><use href="#i-oc"/></svg>Ocio y disfrute</li>
+                            <li class="lf-chip"><svg class="lf-ico" aria-hidden="true"><use href="#i-su"/></svg>Sueño y descanso</li>
+                            <li class="lf-chip"><svg class="lf-ico" aria-hidden="true"><use href="#i-se"/></svg>Sentido y proyecto de vida</li>
+                            <li class="lf-chip"><svg class="lf-ico" aria-hidden="true"><use href="#i-co"/></svg>Contexto</li>
+                        </ul>
+                        <div class="lf-proceso__acciones">
+                            <button class="lf-btn lf-btn--secundario lf-proceso__siguiente" type="button" data-lf-ir="3">Siguiente: plan personalizado</button>
+                        </div>
                     </div>
-                    <div class="lf-proceso__panel" style="display: none;">
+
+                    <div class="lf-proceso__panel" role="tabpanel" id="paso-3" aria-labelledby="paso-3-tab" tabindex="0" hidden>
+                        <span class="lf-etiqueta">Paso 3 de 4</span>
                         <h3>Plan personalizado</h3>
-                        <p>Al final de la segunda sesión te entrego un plan con objetivos concretos y pautas de terapia ocupacional y PNI que encajen en tu día a día.</p>
+                        <p>Convertimos tu mapa en un plan que puedas cumplir.</p>
+                        <div class="lf-proceso__columnas">
+                            <div class="lf-proceso__bloque"><h4>Qué hacemos</h4><p>Elegimos dos o tres objetivos concretos y diseñamos pautas de terapia ocupacional y PNI: rutinas, ajustes sensoriales en tu entorno, respiración, descanso, movimiento y hábitos de alimentación.</p></div>
+                            <div class="lf-proceso__bloque"><h4>Qué te llevas</h4><p>Un plan con pocas pautas y realistas, para empezar al día siguiente en tu casa, tu trabajo o tus estudios.</p></div>
+                        </div>
+                        <ul class="lf-chips" aria-label="Qué incluye el plan">
+                            <li class="lf-chip">Dos o tres objetivos</li>
+                            <li class="lf-chip">Pautas para tu día a día</li>
+                            <li class="lf-chip">Ajustes en tu entorno</li>
+                        </ul>
+                        <div class="lf-proceso__acciones">
+                            <button class="lf-btn lf-btn--secundario lf-proceso__siguiente" type="button" data-lf-ir="4">Siguiente: acompañamiento</button>
+                        </div>
                     </div>
-                    <div class="lf-proceso__panel" style="display: none;">
+
+                    <div class="lf-proceso__panel" role="tabpanel" id="paso-4" aria-labelledby="paso-4-tab" tabindex="0" hidden>
+                        <span class="lf-etiqueta">Paso 4 de 4</span>
                         <h3>Acompañamiento</h3>
-                        <p>Sesiones online semanales o quincenales por Google Meet. Revisamos los objetivos cada mes y ajustamos el plan.</p>
+                        <p>Probamos, ajustamos y volvemos a probar. Sin prisas.</p>
+                        <div class="lf-proceso__columnas">
+                            <div class="lf-proceso__bloque"><h4>Qué hacemos</h4><p>Sesiones online semanales o quincenales para revisar qué funciona en tu día a día y qué conviene cambiar.</p></div>
+                            <div class="lf-proceso__bloque"><h4>Qué te llevas</h4><p>Revisión de tus objetivos cada mes y coordinación con tus profesionales de referencia si hace falta.</p></div>
+                        </div>
+                        <ul class="lf-chips" aria-label="Formato de las sesiones">
+                            <li class="lf-chip">100 % online</li>
+                            <li class="lf-chip">Semanal o quincenal</li>
+                        </ul>
+                        <div class="lf-proceso__acciones">
+                            <a class="lf-btn lf-btn--primario" href="https://wa.me/34613024556?text=Hola%2C%20Laura.%20Vengo%20de%20tu%20web%20y%20me%20gustar%C3%ADa%20reservar%20la%20llamada%20gratuita%20de%2015%20minutos." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg>Escríbeme por WhatsApp</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- DESPLEGABLES PNI -->
-            <div class="lf-desplegables" style="margin-top: 80px;">
-                <h3 style="text-align: center; font-family: var(--font-display); font-size: 1.8em; margin-bottom: 40px;">En qué me baso: Psiconeuroinmunología (PNI)</h3>
-                <details class="lf-desplegable">
-                    <summary>¿Qué es la PNI?</summary>
-                    <div>
-                        <p>La psiconeuroinmunología estudia cómo se relacionan el sistema nervioso, el inmunitario, el hormonal y las emociones. En mis sesiones la uso como marco para revisar hábitos como el descanso, la alimentación, el movimiento o el estrés, desde la terapia ocupacional.</p>
-                    </div>
-                </details>
-                <details class="lf-desplegable">
-                    <summary>¿Cómo me ayuda a regularme?</summary>
-                    <div>
-                        <p>Tu sistema nervioso necesita ritmo, descanso, movimiento y conexión. Cuando estas cuatro cosas alineadas, tu cuerpo se recupera. Trabajamos patrones sencillos que puedas sostener: qué comes, cuándo, cuánto te mueves, cómo duermes, quién está a tu lado.</p>
-                    </div>
-                </details>
-                <details class="lf-desplegable">
-                    <summary>¿Sustituye a mi médico o a mi tratamiento?</summary>
-                    <div>
-                        <p>No. Complementa, pero no sustituye, la atención médica ni la medicación que tengas pautada. Si lo necesitas, me coordino con tus profesionales de referencia.</p>
-                    </div>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <!-- SOBRE MÍ -->
-    <section class="light-bg" id="sobre-mi">
-        <div class="container">
-            <h2>Sobre mí</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <h3>Terapeuta ocupacional y psiconeuroinmunóloga clínica</h3>
-                    <p>Soy terapeuta ocupacional y psiconeuroinmunóloga clínica, con más de 10 años de experiencia clínica, y dirijo Proyecto PasiTOs.</p>
-                    <p>En consulta veo a menudo a personas que llevan años oyendo que es cuestión de actitud. Lo que suele haber detrás es un sistema nervioso que procesa el mundo de otra manera y un entorno que no está pensado para él.</p>
-                    <p>Por eso trabajo con una idea sencilla: si entiendes cómo procesan tu cuerpo y tu mente, puedes diseñar una vida que funcione para ti.</p>
-                    <ul class="about-creds">
-                        <li>Colegiada nº 46400519</li>
-                        <li>Más de 10 años de experiencia clínica</li>
-                        <li>Directora de Proyecto PasiTOs, centro autorizado por la Comunidad de Madrid (S8268)</li>
-                        <li>Más de 400 familias acompañadas en Proyecto PasiTOs</li>
-                        <li>Formación en PNI clínica e integración sensorial (PNI Europe 2022-2025)</li>
-                        <li>Experiencia con TDAH, autismo y perfiles PDA</li>
-                    </ul>
+            <div class="lf-pni">
+                <div class="lf-cabeza-seccion">
+                    <span class="lf-etiqueta">El marco</span>
+                    <h3>¿Qué es la PNI y cómo la uso?</h3>
+                    <p>La psiconeuroinmunología (PNI) es el marco con el que reviso tus hábitos. Abre cada apartado para leerlo.</p>
                 </div>
-                <div>
-                    <div class="about-img">
-                        <img src="img/laura.jpg" alt="Laura Fajardo, terapeuta ocupacional, en su espacio de trabajo" loading="lazy">
-                    </div>
-                    <div class="formacion-gallery">
-                        <img src="img/formacion1.jpg" alt="Laura en una sesión de formación sobre neurodivergencia" loading="lazy">
-                        <img src="img/formacion2.jpg" alt="Laura impartiendo una formación a profesionales" loading="lazy">
-                    </div>
+                <div class="lf-desplegables">
+                    <details class="lf-desplegable">
+                        <summary>Una mirada de conjunto</summary>
+                        <div><p>La PNI mira a la persona entera. En lugar de separar cuerpo, mente y entorno, observa cómo se relacionan. Por eso no trabajamos una pieza aislada: miramos cómo encaja todo tu día a día.</p></div>
+                    </details>
+                    <details class="lf-desplegable">
+                        <summary>Todo está conectado</summary>
+                        <div><p>La investigación en PNI estudia cómo el estrés mantenido, las emociones, el sueño, la alimentación y la microbiota intestinal se relacionan con el sistema nervioso, las defensas y el estado de ánimo. Por eso, en la evaluación miramos tus seis esferas a la vez.</p></div>
+                    </details>
+                    <details class="lf-desplegable">
+                        <summary>Los pilares: tu estilo de vida</summary>
+                        <div><p>La PNI clínica se apoya en cambios de estilo de vida: descanso y ritmos diarios, movimiento, respiración y gestión del estrés, alimentación y relaciones. Como terapeuta ocupacional, los convierto en rutinas concretas que encajen con tu perfil sensorial y con tu vida. Si necesitas apoyo psicológico o un plan nutricional, me coordino con psicología o con dietista-nutricionista.</p></div>
+                    </details>
+                    <details class="lf-desplegable">
+                        <summary>Un complemento, no un sustituto</summary>
+                        <div><p>La PNI como campo científico investiga los vínculos entre mente y cuerpo. En consulta la usan profesionales sanitarios de medicina, fisioterapia, psicología, nutrición o terapia ocupacional como complemento a la atención médica, nunca como sustituto. No cambies tu tratamiento sin hablar con tu médico; si hace falta, me coordino con tus profesionales.</p></div>
+                    </details>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- PREGUNTAS FRECUENTES -->
     <section id="preguntas">
         <div class="container">
             <h2>Preguntas frecuentes</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <button class="faq-question">¿Cuánto dura el proceso? <span>▼</span></button>
-                    <div class="faq-answer">Depende de cada persona. La evaluación son 2 sesiones. En la segunda sesión te entrego el plan personalizado. Después, revisamos objetivos cada mes para decidir cómo seguir.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">¿Funciona igual online? <span>▼</span></button>
-                    <div class="faq-answer">Online trabajo en tu entorno real: puedo ver tu espacio, entender tu rutina y adaptar las pautas a tu día a día. Funciona mejor que presencial.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">¿Sustituye a mi médico o a mi tratamiento? <span>▼</span></button>
-                    <div class="faq-answer">No. Complementa, pero no sustituye, la atención médica ni la medicación que tengas pautada. Si lo necesitas, me coordino con tus profesionales de referencia.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">¿Cuánto cuesta? <span>▼</span></button>
-                    <div class="faq-answer">La primera llamada de 15 minutos es gratuita. Para conocer tarifas, escríbeme por WhatsApp y hablamos sin compromiso.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">¿Qué necesito para las sesiones? <span>▼</span></button>
-                    <div class="faq-answer">Conexión a internet, un ordenador, una tablet o un móvil y un espacio tranquilo. Las sesiones son por Google Meet.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">¿Garantizas resultados? <span>▼</span></button>
-                    <div class="faq-answer">No. Ningún profesional sanitario puede garantizarlos. Lo que sí hago es acordar objetivos medibles contigo y revisar el plan si no avanzamos.</div>
-                </div>
+            <div class="lf-faq lf-desplegables">
+                <details class="lf-desplegable"><summary>¿Sustituye a mi médico o a mi tratamiento?</summary><div><p>No. Complementa, pero no sustituye, la atención médica ni la medicación que tengas pautada. Si lo necesitas, me coordino con tus profesionales de referencia.</p></div></details>
+                <details class="lf-desplegable"><summary>¿Cuánto dura el proceso?</summary><div><p>Depende de cada persona. En la evaluación acordamos objetivos concretos y los revisamos cada mes para decidir cómo seguir.</p></div></details>
+                <details class="lf-desplegable"><summary>¿Funciona igual online?</summary><div><p>Online trabajo en tu entorno real: puedo ver tu espacio, entender tu rutina y adaptar las pautas a tu día a día.</p></div></details>
+                <details class="lf-desplegable"><summary>¿Cuánto cuesta?</summary><div><p>La primera llamada de 15 minutos es gratuita. Para conocer tarifas, escríbeme por WhatsApp y hablamos sin compromiso.</p></div></details>
+                <details class="lf-desplegable"><summary>¿Qué necesito para las sesiones?</summary><div><p>Conexión a internet, un ordenador, una tablet o un móvil y un espacio tranquilo. Usamos Google Meet.</p></div></details>
+                <details class="lf-desplegable"><summary>¿Garantizas resultados?</summary><div><p>No. Ningún profesional sanitario puede garantizarlos. Lo que sí hago es acordar objetivos medibles contigo y revisar el plan si no avanzamos.</p></div></details>
+                <details class="lf-desplegable"><summary>¿Atiendes a adolescentes?</summary><div><p>Sí, desde Proyecto PasiTOs, el centro que dirijo: <a href="https://www.proyectopasitos.es/sesiones-online">sesiones online para adolescentes</a>.</p></div></details>
             </div>
         </div>
     </section>
@@ -1064,33 +986,40 @@
     </footer>
 
     <script>
-        // FAQ
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', function() {
-                const answer = this.nextElementSibling;
-                const isActive = answer.classList.contains('active');
-                document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('active'));
-                if (!isActive) answer.classList.add('active');
-            });
-        });
-
-        // PROCESO INTERACTIVO
-        document.querySelectorAll('.lf-proceso__tab').forEach(tab => {
-            tab.addEventListener('click', function() {
-                const panelIndex = this.dataset.panel;
-                
-                // Update tabs
-                document.querySelectorAll('.lf-proceso__tab').forEach(t => {
-                    t.setAttribute('aria-selected', 'false');
+        (function () {
+            document.querySelectorAll('[data-lf-pasos]').forEach(function (raiz) {
+                var tabs = Array.prototype.slice.call(raiz.querySelectorAll('[role="tab"]'));
+                var paneles = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
+                function activar(i, foco) {
+                    tabs.forEach(function (t, j) {
+                        var activo = i === j;
+                        t.setAttribute('aria-selected', activo ? 'true' : 'false');
+                        t.tabIndex = activo ? 0 : -1;
+                        paneles[j].hidden = !activo;
+                    });
+                    if (foco) tabs[i].focus();
+                }
+                tabs.forEach(function (t, i) {
+                    t.addEventListener('click', function () { activar(i, false); });
+                    t.addEventListener('keydown', function (e) {
+                        var n = null;
+                        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') n = (i + 1) % tabs.length;
+                        if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') n = (i - 1 + tabs.length) % tabs.length;
+                        if (e.key === 'Home') n = 0;
+                        if (e.key === 'End') n = tabs.length - 1;
+                        if (n !== null) { e.preventDefault(); activar(n, true); }
+                    });
                 });
-                this.setAttribute('aria-selected', 'true');
-                
-                // Update panels
-                document.querySelectorAll('.lf-proceso__panel').forEach((panel, index) => {
-                    panel.style.display = index == panelIndex ? 'block' : 'none';
+                raiz.querySelectorAll('[data-lf-ir]').forEach(function (b) {
+                    b.addEventListener('click', function () {
+                        activar(parseInt(b.getAttribute('data-lf-ir'), 10) - 1, true);
+                        raiz.scrollIntoView({ block: 'start' });
+                    });
                 });
+                raiz.classList.add('is-interactivo');
+                activar(0, false);
             });
-        });
+        })();
     </script>
 </body>
 </html>
