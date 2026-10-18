@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laura Fajardo | Terapeuta Online para Neurodivergentes</title>
+    <meta name="description" content="Sesiones online de terapia ocupacional + PNI para adolescentes (14+) y adultos (25-45). Especializada en migrañas, estrés, problemas de sueño y sobrecarga sensorial.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #1d9e75;
+            --secondary: #f39c12;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --text: #34495e;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: #fff;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #16a085 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        header p { font-size: 1.2em; opacity: 0.9; }
+        .hero-subtitle { margin-top: 20px; font-size: 1.1em; }
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin: 60px 0; }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.2); }
+        .card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.3em; }
+        .card p { color: var(--text); }
+        section { padding: 60px 20px; }
+        section h2 { font-size: 2em; text-align: center; color: var(--dark); margin-bottom: 40px; }
+        .section-light { background: var(--light); }
+        .testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .testimonial { background: white; padding: 25px; border-left: 4px solid var(--primary); border-radius: 5px; }
+        .testimonial p { font-style: italic; color: #555; margin-bottom: 10px; }
+        .testimonial-author { font-weight: bold; color: var(--primary); }
+        .faq-item { margin-bottom: 20px; border-bottom: 1px solid #ddd; }
+        .faq-question { cursor: pointer; padding: 15px; background: var(--light); border-radius: 5px; font-weight: bold; display: flex; justify-content: space-between; }
+        .faq-question:hover { background: #dce8e4; }
+        .faq-answer { padding: 15px; display: none; }
+        .faq-answer.active { display: block; }
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+        .btn:hover { background: #16a085; }
+        .btn-secondary { background: var(--secondary); }
+        .btn-secondary:hover { background: #e67e22; }
+        footer { background: var(--dark); color: white; text-align: center; padding: 30px; margin-top: 60px; }
+        .about-list { list-style: none; margin: 30px 0; }
+        .about-list li { padding: 10px 0; }
+        .about-list li:before { content: "✓ "; color: var(--primary); font-weight: bold; margin-right: 10px; }
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.8em; }
+            .cards { grid-template-columns: 1fr; }
+            section h2 { font-size: 1.5em; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Laura Fajardo</h1>
+            <p>Terapeuta Ocupacional Online</p>
+            <p class="hero-subtitle">Especializada en neurodivergencia, estrés, sueño y sensibilidades</p>
+        </div>
+    </header>
+
+    <section class="container">
+        <h2>¿En qué puedo ayudarte?</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>👨‍👩‍👧 Para Padres</h3>
+                <p>Si tu
