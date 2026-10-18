@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laura Fajardo | Terapeuta Ocupacional Online Especializada en Neurodivergencia</title>
-    <meta name="description" content="Sesiones online de Terapia Ocupacional + PNI para adolescentes y adultos neurodivergentes. Especializada en migrañas, estrés, problemas de sueño y sensibilidades. 10+ años acompañando familias.">
+    <title>Laura Fajardo | Terapeuta Ocupacional - Salud Integrativa Online</title>
+    <meta name="description" content="Sesiones online de Terapia Ocupacional + PNI para neurodivergentes. Salud integrativa, empatía y cercanía. 10+ años acompañando familias.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            --primary: #1d9e75;
-            --secondary: #f39c12;
+            --primary: #17a697;
             --dark: #2c3e50;
-            --light: #ecf0f1;
-            --text: #34495e;
-            --light-gray: #f8f9fa;
+            --light: #f8f9fa;
+            --light-primary: #e8f5f3;
+            --text: #555;
+            --text-light: #777;
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
@@ -22,77 +22,45 @@
             background: #fff;
         }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* HEADER & NAVEGACIÓN */
         header {
-            background: linear-gradient(135deg, var(--primary) 0%, #16a085 100%);
-            color: white;
-            padding: 100px 20px 80px;
-            text-align: center;
-        }
-        header h1 { font-size: 2.8em; margin-bottom: 15px; font-weight: 700; line-height: 1.2; }
-        header p { font-size: 1.15em; opacity: 0.95; margin-bottom: 10px; }
-        .hero-subtitle { margin-top: 25px; font-size: 1em; opacity: 0.9; line-height: 1.5; }
-        .hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-top: 50px; }
-        .hero-text h2 { font-size: 1.8em; color: white; margin-bottom: 20px; }
-        .hero-text p { font-size: 1.05em; margin-bottom: 15px; line-height: 1.8; }
-        .hero-img { text-align: center; }
-        .hero-img img { width: 100%; max-width: 400px; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
-        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 60px 0; }
-        .card {
             background: white;
-            padding: 35px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border-top: 4px solid var(--primary);
+            border-bottom: 1px solid #f0f0f0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 20px 0;
         }
-        .card:hover { transform: translateY(-8px); box-shadow: 0 10px 25px rgba(0,0,0,0.12); }
-        .card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.4em; }
-        .card p { color: var(--text); line-height: 1.7; }
-        section { padding: 80px 20px; }
-        section.light { background: var(--light-gray); }
-        section h2 { font-size: 2.2em; text-align: center; color: var(--dark); margin-bottom: 50px; font-weight: 700; }
-        .process { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .process-step {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            border: 2px solid var(--primary);
-        }
-        .process-step h4 { color: var(--primary); font-size: 1.2em; margin-bottom: 10px; }
-        .process-step p { font-size: 0.95em; color: #666; }
-        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; margin-top: 40px; }
-        .about-text h3 { color: var(--primary); font-size: 1.5em; margin-bottom: 20px; }
-        .about-text p { margin-bottom: 20px; line-height: 1.8; font-size: 1.05em; }
-        .about-list { list-style: none; margin: 30px 0; }
-        .about-list li { padding: 12px 0; font-size: 1.05em; }
-        .about-list li:before { content: "✓ "; color: var(--primary); font-weight: bold; margin-right: 10px; font-size: 1.2em; }
-        .faq-item { margin-bottom: 20px; border-bottom: 1px solid #ddd; }
-        .faq-question {
-            cursor: pointer;
-            padding: 20px;
-            background: var(--light-gray);
-            border-radius: 8px;
-            font-weight: 600;
+        .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 1.05em;
-            transition: all 0.3s;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-        .faq-question:hover { background: #dce8e4; }
-        .faq-answer {
-            padding: 20px;
-            display: none;
-            background: white;
-            line-height: 1.8;
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; color: var(--dark); text-decoration: none; }
+        .logo-symbol { font-size: 1.5em; color: var(--primary); }
+        .logo-text { font-size: 1.1em; }
+        nav { display: flex; gap: 30px; }
+        nav a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: var(--primary); }
+        
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #16a085 100%);
+            color: white;
+            padding: 120px 20px 80px;
+            text-align: center;
         }
-        .faq-answer.active { display: block; }
+        .hero h1 { font-size: 3em; font-weight: 700; margin-bottom: 20px; line-height: 1.2; }
+        .hero p { font-size: 1.25em; opacity: 0.95; margin-bottom: 15px; }
+        .hero-subtitle { font-size: 1.05em; opacity: 0.9; margin-bottom: 40px; line-height: 1.6; }
         .btn {
             display: inline-block;
-            background: var(--primary);
-            color: white;
+            background: #f1c40f;
+            color: var(--dark);
             padding: 16px 45px;
             border-radius: 8px;
             text-decoration: none;
@@ -102,22 +70,90 @@
             font-size: 1.05em;
             transition: all 0.3s;
         }
-        .btn:hover { background: #16a085; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(29, 158, 117, 0.3); }
-        .btn-secondary { background: var(--secondary); }
-        .btn-secondary:hover { background: #e67e22; }
-        .cta-section { text-align: center; padding: 60px 20px; background: var(--light); border-radius: 15px; margin: 80px 0; }
-        .cta-section h2 { margin-bottom: 25px; }
-        .cta-section p { font-size: 1.2em; margin-bottom: 30px; color: var(--text); }
-        footer { background: var(--dark); color: white; text-align: center; padding: 40px 20px; margin-top: 80px; }
-        footer p { margin: 8px 0; opacity: 0.9; }
+        .btn:hover { background: #e67e22; color: white; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+        
+        /* SECCIONES */
+        section { padding: 100px 20px; }
+        section.light { background: var(--light-primary); }
+        section h2 { font-size: 2.3em; text-align: center; color: var(--dark); margin-bottom: 60px; font-weight: 700; }
+        
+        /* CARDS */
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 0; }
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .card:hover { border-color: var(--primary); box-shadow: 0 12px 30px rgba(23, 166, 151, 0.15); transform: translateY(-5px); }
+        .card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.4em; }
+        .card p { color: var(--text); line-height: 1.8; font-size: 0.95em; }
+        
+        /* STATS */
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: center; margin-bottom: 80px; }
+        .stat-item h3 { font-size: 2.5em; color: var(--primary); font-weight: 700; margin-bottom: 10px; }
+        .stat-item p { color: var(--text-light); font-size: 0.95em; }
+        
+        /* PROCESO */
+        .process { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .process-step {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+            text-align: center;
+        }
+        .process-step h4 { color: var(--primary); font-size: 1.3em; margin-bottom: 10px; }
+        .process-step p { color: var(--text); font-size: 0.95em; line-height: 1.6; }
+        
+        /* ABOUT */
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+        .about-text h3 { color: var(--primary); font-size: 1.6em; margin-bottom: 20px; }
+        .about-text p { margin-bottom: 20px; line-height: 1.8; font-size: 0.95em; }
+        .about-list { list-style: none; margin: 30px 0; }
+        .about-list li { padding: 10px 0; font-size: 0.95em; }
+        .about-list li:before { content: "✓ "; color: var(--primary); font-weight: bold; margin-right: 10px; font-size: 1.2em; }
+        .about-img { border-radius: 12px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        .about-img img { width: 100%; display: block; }
+        
+        /* FAQ */
+        .faq-item { margin-bottom: 20px; border-bottom: 1px solid #eee; }
+        .faq-question {
+            cursor: pointer;
+            padding: 20px;
+            background: var(--light-primary);
+            border-radius: 8px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.05em;
+            transition: all 0.3s;
+        }
+        .faq-question:hover { background: #dce8e4; }
+        .faq-answer { padding: 20px; display: none; background: white; line-height: 1.8; font-size: 0.95em; }
+        .faq-answer.active { display: block; }
+        
+        /* CTA FINAL */
+        .cta-final { text-align: center; padding: 80px 20px; background: var(--light-primary); border-radius: 15px; margin: 60px 0; }
+        .cta-final h2 { margin-bottom: 20px; }
+        .cta-final p { font-size: 1.15em; margin-bottom: 30px; color: var(--text); }
+        
+        /* FOOTER */
+        footer { background: var(--dark); color: white; text-align: center; padding: 50px 20px; }
+        footer p { margin: 10px 0; opacity: 0.9; }
         .footer-links { margin-top: 20px; }
         .footer-links a { color: var(--primary); text-decoration: none; margin: 0 15px; font-weight: 600; }
+        
         @media (max-width: 768px) {
-            header { padding: 60px 20px 50px; }
-            header h1 { font-size: 2em; }
-            section { padding: 50px 20px; }
+            .hero { padding: 80px 20px 60px; }
+            .hero h1 { font-size: 2em; }
+            section { padding: 60px 20px; }
             section h2 { font-size: 1.8em; }
-            .hero-content { grid-template-columns: 1fr; gap: 30px; }
+            nav { gap: 20px; font-size: 0.9em; }
             .about-content { grid-template-columns: 1fr; gap: 30px; }
             .cards { gap: 20px; }
             .card { padding: 25px; }
@@ -125,208 +161,151 @@
     </style>
 </head>
 <body>
+    <!-- HEADER -->
     <header>
-        <div class="container">
-            <h1>Tu hijo procesa el mundo diferente.<br>Es hora de que lo entiendas.</h1>
-            <p class="hero-subtitle">Soy Laura Fajardo, Terapeuta Ocupacional especializada en neurodivergencia</p>
-            <p style="font-size: 1em; opacity: 0.85;">Terapia Ocupacional + Psiconeuroinmunología (PNI) • 10+ años acompañando familias</p>
-            
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h2>Entiende por qué tu hijo:</h2>
-                    <p>✓ Duerme mal o tiene insomnio</p>
-                    <p>✓ Sufre migrañas frecuentes</p>
-                    <p>✓ Es reactivo a ciertos estímulos</p>
-                    <p>✓ Tiene dificultades de concentración</p>
-                    <p>✓ Se aísla socialmente</p>
-                    <p style="margin-top: 30px; font-style: italic; opacity: 0.9;">Porque su sensorialidad, sueño y estrés no son problemas separados: son TODO UNO.</p>
-                </div>
-                <div class="hero-img">
-                    <img src="img/laura.jpg" alt="Laura Fajardo - Terapeuta Ocupacional" style="width: 100%; border-radius: 15px;">
-                </div>
-            </div>
+        <div class="header-content">
+            <a href="#" class="logo">
+                <span class="logo-symbol">🌿</span>
+                <span class="logo-text">Laura Fajardo</span>
+            </a>
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#proceso">Cómo funciona</a>
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#faq">Preguntas</a>
+            </nav>
         </div>
     </header>
 
-    <section class="container">
-        <h2>¿En qué puedo ayudarte?</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>👨‍👩‍👧 Para Padres</h3>
-                <p>Si tu hijo adolescente (12-18) lucha con neurodivergencia, migrañas, dificultades sensoriales o estrés académico.</p>
-                <p style="margin-top: 15px;"><strong>Quiero entenderlo mejor</strong></p>
-            </div>
-            <div class="card">
-                <h3>🧠 Problemas Específicos</h3>
-                <p>Migrañas frecuentes, insomnio, reactividad sensorial, estrés crónico. Sesiones personalizadas para abordar la raíz del problema.</p>
-                <p style="margin-top: 15px;"><strong>Busco soluciones concretas</strong></p>
-            </div>
-            <div class="card">
-                <h3>👤 Para Adultos</h3>
-                <p>Si eres adulto neurodivergente (25-45) y buscas entenderte mejor: manejo del estrés, regulación del sueño, migraña.</p>
-                <p style="margin-top: 15px;"><strong>Busco para mí mismo/a</strong></p>
-            </div>
-        </div>
-    </section>
-
-    <section class="light">
+    <!-- HERO -->
+    <section class="hero" id="inicio">
         <div class="container">
-            <h2>¿Cómo funciona?</h2>
-            <div class="process">
-                <div class="process-step">
-                    <h4>1. Consulta Inicial</h4>
-                    <p>15 minutos GRATIS vía WhatsApp para conocernos. Cuéntame qué te trae aquí.</p>
-                </div>
-                <div class="process-step">
-                    <h4>2. Evaluación Integral</h4>
-                    <p>Análisis profundo: sensorialidad, sueño, estrés, contexto. Entendemos la raíz del problema.</p>
-                </div>
-                <div class="process-step">
-                    <h4>3. Plan Personalizado</h4>
-                    <p>Estrategias prácticas basadas en OT + PNI. Herramientas que funcionan en casa y colegio.</p>
-                </div>
-                <div class="process-step">
-                    <h4>4. Acompañamiento Continuo</h4>
-                    <p>Sesiones semanales o quincenales. Seguimiento, ajustes, progreso medible.</p>
-                </div>
-            </div>
+            <h1>Tu hijo procesa el mundo diferente.<br>Es hora de que lo entiendas.</h1>
+            <p>Soy Laura Fajardo, Terapeuta Ocupacional especializada en neurodivergencia</p>
+            <p class="hero-subtitle">Terapia Ocupacional + Psiconeuroinmunología • Sesiones 100% online<br>10+ años acompañando a familias y adultos</p>
+            <a href="https://wa.me/34613024556?text=Hola%20Laura%2C%20quiero%20solicitar%20una%20consulta%20gratuita" class="btn" target="_blank">📱 Consulta gratuita de 15 minutos</a>
         </div>
     </section>
 
+    <!-- CREDIBILIDAD -->
     <section class="container">
-        <h2>¿Por qué funciona?</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>🎯 Enfoque Integral</h3>
-                <p>No tratamos síntomas aislados. Terapia Ocupacional + PNI para abordar la conexión cuerpo-mente-contexto.</p>
+        <div class="stats">
+            <div class="stat-item">
+                <h3>10+</h3>
+                <p>Años de experiencia clínica</p>
             </div>
-            <div class="card">
-                <h3>💡 Comprensión Profunda</h3>
-                <p>10+ años de experiencia con 400+ familias. Sé exactamente qué significa ser neurodivergente porque he acompañado a cientos.</p>
+            <div class="stat-item">
+                <h3>400+</h3>
+                <p>Familias y adultos acompañados</p>
             </div>
-            <div class="card">
-                <h3>🛠️ Herramientas Prácticas</h3>
-                <p>No solo teoría. Técnicas que puedes usar HOY MISMO en casa, colegio o trabajo.</p>
+            <div class="stat-item">
+                <h3>85%+</h3>
+                <p>Tasa de mejora en clientes</p>
             </div>
         </div>
     </section>
 
-    <section class="light">
+    <!-- SERVICIOS -->
+    <section class="light" id="servicios">
+        <div class="container">
+            <h2>¿En qué puedo ayudarte?</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>👨‍👩‍👧 Para Padres</h3>
+                    <p>Si tu hijo adolescente lucha con neurodivergencia, migrañas, dificultades sensoriales o estrés académico. Entendemos lo que significa ser padre de un hijo diferente.</p>
+                </div>
+                <div class="card">
+                    <h3>🧠 Problemas Específicos</h3>
+                    <p>Migrañas frecuentes, insomnio, reactividad sensorial, estrés crónico. Abordamos la raíz del problema, no solo los síntomas.</p>
+                </div>
+                <div class="card">
+                    <h3>👤 Para Adultos</h3>
+                    <p>Si eres adulto neurodivergente (25-45) buscas entenderte: manejo del estrés, regulación del sueño, migraña, participación social.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section class="container" id="proceso">
+        <h2>¿Cómo funciona?</h2>
+        <div class="process">
+            <div class="process-step">
+                <h4>1. Consulta Inicial</h4>
+                <p>15 minutos GRATIS vía WhatsApp. Cuéntame qué te trae aquí, sin compromiso.</p>
+            </div>
+            <div class="process-step">
+                <h4>2. Evaluación Integral</h4>
+                <p>Análisis profundo de sensorialidad, sueño, estrés y contexto. Entendemos la raíz.</p>
+            </div>
+            <div class="process-step">
+                <h4>3. Plan Personalizado</h4>
+                <p>Estrategias prácticas basadas en OT + PNI. Herramientas que funcionan en casa y colegio.</p>
+            </div>
+            <div class="process-step">
+                <h4>4. Acompañamiento</h4>
+                <p>Sesiones semanales/quincenales. Seguimiento continuo, ajustes, progreso medible.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section class="light" id="sobre-mi">
         <div class="container">
             <h2>Sobre mí</h2>
             <div class="about-content">
                 <div class="about-text">
                     <h3>Mi especialidad: Neurodivergencia</h3>
                     <p>Soy Terapeuta Ocupacional con especialización en Psiconeuroinmunología (PNI) e Integración Sensorial. Mi pasión es ayudar a personas neurodivergentes a <strong>entenderse mejor</strong>.</p>
-                    <p>Durante más de 10 años he acompañado a familias y adultos que luchaban con lo que creían eran "problemas de comportamiento" o "falta de fuerza de voluntad"... cuando en realidad eran patrones sensoriales, regulación del sistema nervioso y contextos no adaptados.</p>
-                    <p>Mi enfoque: <strong>si entiendes CÓMO procesa tu mente y cuerpo, puedes diseñar una vida que funcione para ti.</strong></p>
-                </div>
-                <div>
+                    <p>Durante 10+ años he acompañado a familias y adultos que creían tener "problemas de comportamiento" o "falta de fuerza de voluntad"... cuando en realidad eran patrones sensoriales, regulación del sistema nervioso y contextos no adaptados.</p>
+                    <p><strong>Mi enfoque:</strong> Si entiendes CÓMO procesa tu mente y cuerpo, puedes diseñar una vida que funcione para ti.</p>
                     <ul class="about-list">
-                        <li><strong>10+ años</strong> de experiencia clínica</li>
-                        <li><strong>400+</strong> familias y adultos acompañados</li>
-                        <li><strong>Especializada</strong> en TDAH, TEA, PDA y otras neurodivergencias</li>
-                        <li><strong>Formación continua</strong> en últimas investigaciones en neurociencia</li>
-                        <li><strong>100% online</strong> para que accedas desde donde estés</li>
-                        <li><strong>Enfoque personalizado</strong> — no hay dos personas iguales</li>
+                        <li>10+ años de experiencia clínica</li>
+                        <li>400+ familias y adultos acompañados</li>
+                        <li>Especializada en TDAH, TEA, PDA y neurodivergencias</li>
+                        <li>Formación continua en neurociencia</li>
+                        <li>100% online para tu comodidad</li>
+                        <li>Enfoque personalizado (no hay dos iguales)</li>
                     </ul>
                 </div>
+                <div class="about-img">
+                    <img src="img/laura.jpg" alt="Laura Fajardo - Terapeuta Ocupacional">
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- FAQ -->
     <section class="container">
-        <h2>Preguntas Frecuentes</h2>
-        <div id="faq">
+        <h2 id="faq">Preguntas Frecuentes</h2>
+        <div id="faq-container">
             <div class="faq-item">
-                <div class="faq-question">
-                    ¿Cuándo empezaré a ver resultados?
-                    <span style="font-size: 0.8em;">▼</span>
-                </div>
-                <div class="faq-answer">
-                    La mayoría de mis clientes notan cambios en las primeras 2-3 sesiones. Un mejor sueño, menos reactividad sensorial, mayor concentración. Los cambios profundos y duraderos se consolidan en 8-12 semanas, dependiendo de cada persona.
-                </div>
+                <div class="faq-question">¿Cuándo empezaré a ver resultados? <span>▼</span></div>
+                <div class="faq-answer">La mayoría de clientes notan cambios en 2-3 sesiones. Mejor sueño, menos reactividad sensorial, mayor concentración. Los cambios profundos se consolidan en 8-12 semanas.</div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">
-                    ¿Es 100% online? ¿Realmente funciona?
-                    <span style="font-size: 0.8em;">▼</span>
-                </div>
-                <div class="faq-answer">
-                    Sí, 100% online vía Zoom o Google Meet. Funciona mejor de lo que piensas porque trabajamos en el contexto REAL: casa, colegio, trabajo. Puedo verte en tu entorno, entender tus desafíos reales y diseñar estrategias que encajen en tu vida.
-                </div>
+                <div class="faq-question">¿Es 100% online? ¿Realmente funciona? <span>▼</span></div>
+                <div class="faq-answer">Sí, 100% online vía Zoom. Funciona mejor de lo que piensas porque trabajamos en tu contexto REAL: casa, colegio, trabajo. Puedo entender tus desafíos reales y diseñar estrategias que encajen en tu vida.</div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">
-                    ¿Cuál es el costo?
-                    <span style="font-size: 0.8em;">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <strong>Consulta inicial (15 min): GRATIS vía WhatsApp.</strong> Las sesiones regulares varían según el plan que elijas (sesiones puntuales o bono de acompañamiento). Hablamos de presupuesto en la consulta gratuita, sin compromiso.
-                </div>
+                <div class="faq-question">¿Cuál es el costo? <span>▼</span></div>
+                <div class="faq-answer"><strong>Consulta inicial (15 min): GRATIS.</strong> Las sesiones regulares varían según el plan que elijas. Hablamos de presupuesto en la consulta, sin compromiso.</div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">
-                    ¿Qué necesito para la sesión?
-                    <span style="font-size: 0.8em;">▼</span>
-                </div>
-                <div class="faq-answer">
-                    Solo: conexión a internet, un dispositivo (computadora, tablet o móvil) y un espacio tranquilo donde podamos hablar. Yo guío todo el proceso. No necesitas preparar nada especial.
-                </div>
+                <div class="faq-question">¿Qué necesito para la sesión? <span>▼</span></div>
+                <div class="faq-answer">Solo: conexión a internet, un dispositivo y un espacio tranquilo. Yo guío todo el proceso. No necesitas preparar nada especial.</div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">
-                    ¿Garantizas resultados?
-                    <span style="font-size: 0.8em;">▼</span>
-                </div>
-                <div class="faq-answer">
-                    No hay garantías en terapia porque cada persona es única. Pero mi tasa de mejora es 85%+. Si después de 3 sesiones no sientes progreso real, revisamos el plan juntos o buscamos otra opción que te encaje mejor.
-                </div>
+                <div class="faq-question">¿Garantizas resultados? <span>▼</span></div>
+                <div class="faq-answer">No hay garantías en terapia porque cada persona es única. Pero mi tasa de mejora es 85%+. Si después de 3 sesiones no sientes progreso, revisamos el plan juntos.</div>
             </div>
         </div>
     </section>
 
-    <div class="cta-section container">
-        <h2>¿Listo para empezar?</h2>
-        <p>Tu consulta inicial de 15 minutos es GRATIS. Sin compromiso. Solo para conocernos y ver cómo puedo ayudarte.</p>
-        <a href="https://wa.me/34613024556?text=Hola%20Laura%2C%20me%20gustaría%20solicitar%20una%20consulta%20gratuita%20de%2015%20minutos%20para%20saber%20más%20sobre%20tus%20sesiones%20online.%20¿Tienes%20disponibilidad%3F" class="btn btn-secondary" target="_blank">📱 Solicita tu consulta gratuita por WhatsApp</a>
-    </div>
-
-    <footer>
-        <div class="container">
-            <p><strong>Laura Fajardo</strong></p>
-            <p>Terapeuta Ocupacional • Especialista en Neurodivergencia • Psiconeuroinmunología</p>
-            <div class="footer-links">
-                <a href="https://wa.me/34613024556" target="_blank">WhatsApp</a>
-                <a href="https://instagram.com" target="_blank">Instagram</a>
-                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-            </div>
-            <p style="margin-top: 30px; font-size: 0.9em; opacity: 0.7;">© 2026 Laura Fajardo. Todos los derechos reservados.</p>
-            <p style="font-size: 0.85em;"><a href="#" style="color: var(--primary); text-decoration: none;">Aviso Legal</a> | <a href="#" style="color: var(--primary); text-decoration: none;">Política de Privacidad</a></p>
-        </div>
-    </footer>
-
-    <script>
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', function() {
-                const answer = this.nextElementSibling;
-                const isActive = answer.classList.contains('active');
-                
-                // Cerrar todos los otros
-                document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('active'));
-                document.querySelectorAll('.faq-question').forEach(q => {
-                    q.style.background = '#ecf0f1';
-                    q.style.color = 'inherit';
-                });
-                
-                // Abrir/cerrar este
-                if (!isActive) {
-                    answer.classList.add('active');
-                    this.style.background = '#1d9e75';
-                    this.style.color = 'white';
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+    <!-- CTA FINAL -->
+    <section class="container">
+        <div class="cta-final">
+            <h2>¿Listo para empezar?</h2>
+            <p>Tu consulta inicial de 15 minutos es GRATIS. Sin compromiso. Solo para conocernos.</p>
+            <a href="https://wa.me/34613024556?text=Hola%20Laura%2C%20me%20gustaría%20solicitar%20una%20consulta%20gratuita"
