@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terapia ocupacional online y PNI | Laura Fajardo</title>
     <meta name="description" content="Terapia ocupacional online y PNI para personas adultas neurodivergentes. Método propio de 6 esferas. Primera llamada gratuita de 15 minutos.">
+    <meta property="og:image" content="https://web-laurafajardo.vercel.app/img/og-laura-fajardo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='none' stroke='%23E8F5F2' stroke-width='1'/%3E%3Cg%3E%3Cpath d='M 32 12 Q 44 22 44 38 Q 44 50 32 56 Q 20 50 20 38 Q 20 22 32 12' fill='none' stroke='%23147B6F' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='12' x2='32' y2='56' stroke='%23147B6F' stroke-width='1.5'/%3E%3Cline x1='32' y1='32' x2='32' y2='44' stroke='%23147B6F' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='26' y1='38' x2='38' y2='38' stroke='%23147B6F' stroke-width='1.5' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -58,12 +62,32 @@
             padding: 0 32px;
         }
 
-        .logo {
-            font-family: var(--font-display);
-            font-size: 1.2em;
-            font-weight: 600;
+        /* LOGO */
+        .lf-logo {
+            display: inline-flex;
+            align-items: center;
+            min-height: 44px;
             color: var(--pizarra);
             text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .lf-logo__svg {
+            width: 160px;
+            height: 40px;
+            flex: none;
+            transition: color 0.3s ease;
+        }
+
+        .lf-logo:hover .lf-logo__svg {
+            color: var(--turquesa-profunda);
+        }
+
+        @media (max-width: 767px) {
+            .lf-logo__svg {
+                width: 120px;
+                height: 30px;
+            }
         }
 
         nav {
@@ -315,8 +339,6 @@
         .lf-btn--primario:hover { background: var(--accion-fondo-hover); }
         .lf-btn--secundario { background: transparent; color: var(--texto-enlace); border-color: var(--texto-enlace); }
         .lf-btn--secundario:hover { background: var(--fondo-velo); }
-        .lf-btn--claro { background: var(--texto-sobre-oscuro); color: var(--fondo-oscuro); }
-        .lf-btn--claro:hover { background: var(--marca-turquesa-claro); }
         @media (prefers-reduced-motion: no-preference) { .lf-btn { transition: background-color 0.15s ease; } }
 
         .lf-nota-salud {
@@ -324,7 +346,6 @@
             max-width: var(--ancho-lectura); margin-top: var(--espacio-3); padding: var(--espacio-3);
             background: var(--fondo-velo); border: 1px solid var(--borde-suave); border-radius: var(--radio-lg);
         }
-        .lf-seccion--velo .lf-nota-salud { background: var(--fondo-tarjeta); }
         .lf-nota-salud svg { width: 24px; height: 24px; fill: none; stroke: var(--texto-enlace); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
         .lf-nota-salud p { font-size: 17px; line-height: 1.6; }
 
@@ -440,7 +461,7 @@
         }
 
         .card:hover {
-            border-color: var(--turqueza-profunda);
+            border-color: var(--turquesa-profunda);
             box-shadow: 0 20px 60px rgba(20, 123, 111, 0.15);
             transform: translateY(-8px);
         }
@@ -642,7 +663,17 @@
     <!-- HEADER -->
     <header>
         <div class="header-content">
-            <a href="#" class="logo">Laura Fajardo</a>
+            <a href="#" class="lf-logo">
+                <svg class="lf-logo__svg" viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMid meet">
+                    <g>
+                        <path d="M 32 20 Q 48 32 48 50 Q 48 64 32 72 Q 16 64 16 50 Q 16 32 32 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <line x1="32" y1="20" x2="32" y2="72" stroke="currentColor" stroke-width="1.5"/>
+                        <line x1="32" y1="44" x2="32" y2="56" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="26" y1="50" x2="38" y2="50" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </g>
+                    <text x="62" y="50" font-family="var(--font-display)" font-size="28" font-weight="500" fill="currentColor" dominant-baseline="middle">Laura Fajardo</text>
+                </svg>
+            </a>
             <nav>
                 <a href="#te-suena">¿Te suena?</a>
                 <a href="#metodo">Método</a>
