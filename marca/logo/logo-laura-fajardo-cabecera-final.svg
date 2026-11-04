@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 100" role="img" aria-label="Laura Fajardo">
+  <g fill="none" stroke="#4a4a4a" stroke-width="3">
+    <circle cx="50" cy="50" r="7"/>
+    <circle cx="50" cy="50" r="15"/>
+    <circle cx="50" cy="50" r="23"/>
+  </g>
+  <g fill="#16a085">
+    <circle cx="50" cy="9" r="6.5"/>
+    <circle cx="85.5" cy="29.5" r="6.5"/>
+    <circle cx="85.5" cy="70.5" r="6.5"/>
+    <circle cx="50" cy="91" r="6.5"/>
+    <circle cx="14.5" cy="70.5" r="6.5"/>
+    <circle cx="14.5" cy="29.5" r="6.5"/>
+  </g>
+  <text x="120" y="68" font-family="Montserrat, Avenir Next, Segoe UI, Arial, sans-serif" font-size="56" font-weight="600" letter-spacing="0.5" fill="#4a4a4a">Laura Fajardo</text>
+</svg>

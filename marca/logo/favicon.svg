@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Laura Fajardo">
+  <g fill="none" stroke="#4a4a4a" stroke-width="5">
+    <circle cx="50" cy="50" r="9"/>
+    <circle cx="50" cy="50" r="22"/>
+  </g>
+  <g fill="#16a085">
+    <circle cx="50" cy="11" r="9"/>
+    <circle cx="83.8" cy="30.5" r="9"/>
+    <circle cx="83.8" cy="69.5" r="9"/>
+    <circle cx="50" cy="89" r="9"/>
+    <circle cx="16.2" cy="69.5" r="9"/>
+    <circle cx="16.2" cy="30.5" r="9"/>
+  </g>
+</svg>
