@@ -59,12 +59,12 @@ nav .btn{min-height:44px;padding:8px 20px;font-size:.95rem}
 
 /* hero */
 .hero{padding:80px 0 72px}
-.hero .wrap{display:grid;grid-template-columns:1.5fr .5fr;gap:48px;align-items:center}
+.hero .wrap{display:grid;grid-template-columns:.55fr 1.45fr;gap:48px;align-items:center}
 .hero p.lead{margin:20px 0 28px}
 .acciones{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 .escasez{margin-top:16px;font-size:.95rem;color:var(--pizarra)}
-.hero img{width:100%;max-width:320px;justify-self:center;border-radius:24px;display:block;aspect-ratio:2/3;object-fit:cover}
-@media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.hero img{max-width:260px}}
+.hero img{order:-1;width:100%;max-width:300px;justify-self:center;border-radius:24px;display:block;height:auto}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.hero img{order:0;max-width:260px}}
 
 /* tarjetas */
 .dos,.tres{display:grid;gap:24px;margin-top:32px}
@@ -93,7 +93,7 @@ nav .btn{min-height:44px;padding:8px 20px;font-size:.95rem}
 .pasos li::before{content:counter(p);display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--turquesa-profunda);color:#fff;font-family:'Montserrat',sans-serif;font-weight:600;margin-bottom:12px}
 
 .nota{font-size:.95rem;color:var(--pizarra);margin-top:24px}
-.sobre{display:grid;grid-template-columns:.55fr 1.45fr;gap:48px;align-items:center}
+.sobre{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
 .sobre img{width:100%;height:auto;border-radius:24px;display:block}
 @media(max-width:820px){.sobre{grid-template-columns:1fr}.sobre img{max-width:320px}}
 
@@ -109,6 +109,12 @@ footer a{margin-right:16px}
 .expertia li{border:1px solid var(--turquesa-profunda);color:var(--turquesa-profunda);border-radius:999px;padding:6px 16px;font-size:.95rem;font-weight:600}
 .ver-precio summary{min-height:44px;display:inline-flex;align-items:center;cursor:pointer;color:var(--turquesa-profunda);font-weight:600;text-decoration:underline}
 .ver-precio .precio{margin-top:4px}
+.collage{isolation:isolate;position:relative;aspect-ratio:1/1;width:100%}
+.collage img{position:absolute;display:block;object-fit:cover;border-radius:20px}
+.collage .c1{top:0;left:0;width:92%;height:58%}
+.collage .c2{bottom:0;right:0;width:68%;height:52%;border:6px solid #fff;box-shadow:0 8px 24px rgba(43,66,66,.18)}
+.collage::before{content:"";position:absolute;left:-12px;bottom:-12px;width:46%;height:42%;border-radius:20px;background:var(--turquesa);opacity:.25;z-index:-1}
+@media(max-width:820px){.collage{max-width:480px}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Laura Fajardo","jobTitle":"Terapeuta ocupacional especialista en integración sensorial y psiconeuroinmunóloga clínica","knowsAbout":["Integración sensorial","Neurodiversidad","Psiconeuroinmunología","Perfil sensorial","Regulación del sistema nervioso","Sueño","Ocupación humana","Hábitos de vida saludable"],"description":"Sesiones online de regulación sensorial y del sistema nervioso para adolescentes y adultos neurodivergentes.","alumniOf":{"@type":"CollegeOrUniversity","name":"Universidad Rey Juan Carlos"},"sameAs":["https://www.linkedin.com/in/laura-fajardo-horno-66b02122/"],"worksFor":{"@type":"Organization","name":"Proyecto PasiTOs","url":"https://www.proyectopasitos.es/"}}
@@ -185,6 +191,7 @@ footer a{margin-right:16px}
       <div class="card">
         <span class="tag">Familias</span>
         <h3>Busco ayuda para mi hijo/a adolescente</h3>
+        <p>Sesiones para el adolescente y/o para los padres que necesiten orientación, recursos y estrategias.</p>
         <ul>
           <li>Duerme mal o se acuesta muy tarde.</li>
           <li>Come de forma muy selectiva o irregular.</li>
@@ -223,7 +230,7 @@ footer a{margin-right:16px}
         <p>15 minutos por videollamada para conocernos y ver si puedo ayudarte. No es una consulta ni un diagnóstico.</p>
       </li>
       <li>
-        <h3>2. Sesión inicial de valoración</h3>
+        <h3>2. Ver cómo puedo ayudarte</h3>
         <p>60 minutos online. Recogemos la información relevante y formulamos hipótesis de trabajo.</p>
       </li>
       <li>
@@ -291,7 +298,10 @@ footer a{margin-right:16px}
 
 <section id="sobre-mi">
   <div class="wrap sobre">
-    <img src="img/laura1.jpeg" alt="Laura Fajardo" width="1600" height="1200">
+    <div class="collage">
+      <img class="c1" src="img/laura2.jpeg" alt="Laura Fajardo impartiendo una ponencia sobre integración sensorial" width="2000" height="1125" loading="lazy">
+      <img class="c2" src="img/laura1.jpeg" alt="Laura Fajardo durante una charla con familias y profesionales" width="1600" height="1200" loading="lazy">
+    </div>
     <div>
       <h2>Sobre mí</h2>
       <p>Soy Laura Fajardo, terapeuta ocupacional especialista en integración sensorial y neurodiversidad, y psiconeuroinmunóloga clínica. Llevo 15 años trabajando con niños, adolescentes y adultos con diferencias en el desarrollo.</p>
